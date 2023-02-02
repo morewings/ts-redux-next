@@ -335,10 +335,10 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
-"@olxui/core@12.9.0-alpha.3":
-  version "12.9.0-alpha.3"
-  resolved "https://olx.jfrog.io/olx/api/npm/naspersclassifieds-olx-jobs-npm/@olxui/core/-/@olxui/core-12.9.0-alpha.3.tgz#af5e00cf5e78087b90f5c21ac2b0c7a3436cc5b5"
-  integrity sha512-M9BuPTo9Kn0Am4Py43k8BLdvDoxkEdwFYkIl9EXds6g/yAFXRdvS0X3w8jnVXuBucbOp1VXwSk8mupabgjDAsQ==
+"@olxui/core@12.10.2":
+  version "12.10.2"
+  resolved "https://olx.jfrog.io/olx/api/npm/naspersclassifieds-olx-jobs-npm/@olxui/core/-/@olxui/core-12.10.2.tgz#6341a0cc52c3a2393b3fbc24991571e50c67d5a2"
+  integrity sha512-2D0gbRNqp7WaTlUa9wofsHeibeYhqereKUCXLBxGFMMgR3ZMJJ6fNpBozgoxMrx+Fu5PKsAmx7SP0O2JOEC03Q==
   dependencies:
     "@babel/runtime" "7.20.7"
     "@babel/runtime-corejs3" "7.20.7"
