@@ -5,13 +5,15 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "analyze:build": "ANALYZE=true yarn build",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
     "@emotion/react": "11.10.5",
     "@emotion/styled": "11.10.5",
-    "@olxui/core": "12.10.2",
+    "@next/bundle-analyzer": "13.1.6",
+    "@olxui/core": "13.0.0-beta.20",
     "next": "13.1.5",
     "react": "18.2.0",
     "react-dom": "18.2.0"
