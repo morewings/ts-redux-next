@@ -13,7 +13,7 @@
     "@emotion/react": "11.10.5",
     "@emotion/styled": "11.10.5",
     "@next/bundle-analyzer": "13.1.6",
-    "@olxui/core": "13.0.0-beta.20",
+    "@olxui/core": "13.0.0-alpha.2",
     "next": "13.1.5",
     "react": "18.2.0",
     "react-dom": "18.2.0"
