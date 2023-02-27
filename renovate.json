@@ -1,0 +1,19 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:base",
+    ":automergeLinters",
+    ":automergeTypes",
+    ":automergeTesters"
+  ],
+  "labels": [
+    "dependencies"
+  ],
+  "rangeStrategy": "pin",
+  "prBodyNotes": [
+    "Brought to you by Nexus team."
+  ],
+  "schedule": [
+    "after 9pm on sunday"
+  ]
+}
