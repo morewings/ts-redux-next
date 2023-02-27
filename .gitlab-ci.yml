@@ -5,10 +5,10 @@ stages:
 
 self-test:
     stage: test
-    cache:
-        key: $CI_JOB_NAME
-        paths:
-          - .pnpm-store
+#    cache:
+#        key: $CI_JOB_NAME
+#        paths:
+#          - .pnpm-store
     before_script:
         - pnpm config set @nexus:registry https://git.naspersclassifieds.com/api/v4/projects/4482/packages/npm/
         - pnpm config set -- '//git.naspersclassifieds.com/api/v4/projects/4482/packages/npm/:_authToken' ${CI_JOB_TOKEN}
