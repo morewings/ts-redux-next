@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import {Button} from '@olxui/core';
+import {Button} from '@olxui/core/dist/core/Button';
 import {StyleDemo} from '@/components/Demo.style';
 
 export default function Home() {

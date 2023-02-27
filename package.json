@@ -7,13 +7,15 @@
     "build": "next build",
     "analyze:build": "ANALYZE=true yarn build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "docker:build": "docker build -t registry.naspersclassifieds.com/olxeu/nexus/starter-next/node-18-pnpm .",
+    "docker:push": "docker push registry.naspersclassifieds.com/olxeu/nexus/starter-next/node-18-pnpm"
   },
   "dependencies": {
     "@emotion/react": "11.10.5",
     "@emotion/styled": "11.10.5",
     "@next/bundle-analyzer": "13.1.6",
-    "@olxui/core": "13.0.0-alpha.2",
+    "@olxui/core": "13.3.0",
     "next": "13.1.5",
     "react": "18.2.0",
     "react-dom": "18.2.0"

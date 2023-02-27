@@ -1,0 +1,20 @@
+image: registry.naspersclassifieds.com/olxeu/nexus/starter-next/node-18-pnpm
+
+stages:
+  - test
+
+self-test:
+  stage: test
+  cache:
+    key: $CI_JOB_NAME
+    paths:
+      - .pnpm-store
+  before_script:
+    - pnpm config set store-dir .pnpm-store
+    - pnpm install --reporter=silent
+  script:
+    - pnpm run build
+    - pnpm run lint
+  needs: []
+  only:
+    - merge_requests
