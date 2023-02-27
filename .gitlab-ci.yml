@@ -13,8 +13,7 @@ self-test:
         - pnpm config set @nexus:registry https://git.naspersclassifieds.com/api/v4/projects/4482/packages/npm/
         - pnpm config set -- '//git.naspersclassifieds.com/api/v4/projects/4482/packages/npm/:_authToken' ${CI_JOB_TOKEN}
         - pnpm config set store-dir .pnpm-store
-        - pnpm install
-#        - pnpm install --reporter=silent
+        - pnpm install --reporter=silent
     script:
         - pnpm run build
         - pnpm run lint:style
