@@ -8,25 +8,44 @@
     "analyze:build": "ANALYZE=true yarn build",
     "start": "next start",
     "lint": "next lint",
+    "fix": "next lint --fix",
+    "lint:tsc": "tsc --pretty",
+    "lint:style": "stylelint 'src/**/*.{ts,tsx}'",
+    "fix:style": "stylelint 'src/**/*.{ts,tsx}' --fix",
     "docker:build": "docker build -t registry.naspersclassifieds.com/olxeu/nexus/starter-next/node-18-pnpm .",
-    "docker:push": "docker push registry.naspersclassifieds.com/olxeu/nexus/starter-next/node-18-pnpm"
+    "docker:push": "docker push registry.naspersclassifieds.com/olxeu/nexus/starter-next/node-18-pnpm",
+    "prepare": "is-ci || husky install"
   },
   "dependencies": {
     "@emotion/react": "11.10.5",
     "@emotion/styled": "11.10.5",
-    "@next/bundle-analyzer": "13.1.6",
-    "@olxui/core": "13.3.0",
+    "@olxui/core": "npm:@nexus/lib-react@13.3.0",
     "next": "13.1.5",
     "react": "18.2.0",
     "react-dom": "18.2.0"
   },
   "devDependencies": {
     "@emotion/babel-plugin": "11.10.5",
+    "@next/bundle-analyzer": "13.1.6",
     "@types/node": "18.11.18",
     "@types/react": "18.0.27",
     "@types/react-dom": "18.0.10",
+    "@typescript-eslint/eslint-plugin": "^5.53.0",
     "eslint": "8.32.0",
     "eslint-config-next": "13.1.5",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-ssr-friendly": "^1.2.0",
+    "husky": "^8.0.0",
+    "is-ci": "^3.0.1",
+    "lint-staged": "^13.1.2",
+    "postcss": "^8.4.21",
+    "postcss-styled-syntax": "^0.3.3",
+    "prettier": "^2.8.4",
+    "stylelint": "^15.2.0",
+    "stylelint-config-standard": "^30.0.1",
+    "stylelint-config-styled-components": "^0.1.1",
+    "stylelint-order": "^6.0.2",
     "typescript": "4.9.4"
   }
 }

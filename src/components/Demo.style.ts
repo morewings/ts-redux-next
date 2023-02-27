@@ -1,5 +1,5 @@
-import {styled} from '@olxui/core/dist/theme';
+import { styled } from "@olxui/core/dist/theme";
 
 export const StyleDemo = styled.div`
-    color: ${({theme}) => theme.colors['background-brand-alternative']}
-`
+    color: ${({ theme }) => theme.colors["background-brand-alternative"]};
+`;
