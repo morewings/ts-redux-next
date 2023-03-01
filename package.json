@@ -19,7 +19,7 @@
   "dependencies": {
     "@emotion/react": "11.10.5",
     "@emotion/styled": "11.10.5",
-    "@olxui/core": "npm:@nexus/lib-react@13.3.0",
+    "@olxui/core": "13.3.1",
     "next": "13.1.5",
     "react": "18.2.0",
     "react-dom": "18.2.0"
