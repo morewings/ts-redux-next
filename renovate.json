@@ -15,5 +15,11 @@
   ],
   "schedule": [
     "before 3am on the first day of the month"
+  ],
+  "packageRules": [
+    {
+      "matchPackageNames": ["@nexus/lib-react", "@olxui/core"],
+      "enabled": false
+    }
   ]
 }
