@@ -6,7 +6,7 @@ specifiers:
   '@emotion/styled': 11.10.5
   '@next/bundle-analyzer': 13.1.6
   '@nexus/lib-react': 13.3.0
-  '@olxui/core': 13.3.0
+  '@olxui/core': 14.0.0-beta.7
   '@types/node': 18.11.18
   '@types/react': 18.0.27
   '@types/react-dom': 18.0.10
@@ -35,7 +35,7 @@ dependencies:
   '@emotion/react': 11.10.5_3stiutgnnbnfnf3uowm5cip22i
   '@emotion/styled': 11.10.5_jrh5enlbqfbnumycmktdqgd6se
   '@nexus/lib-react': 13.3.0_5rzy53przelm5jchjmb5vr6dxy
-  '@olxui/core': 13.3.0_5rzy53przelm5jchjmb5vr6dxy
+  '@olxui/core': 14.0.0-beta.7_5rzy53przelm5jchjmb5vr6dxy
   next: 13.1.5_biqbaboplfbrettd7655fr4n2y
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
@@ -538,8 +538,8 @@ packages:
       fastq: 1.15.0
     dev: true
 
-  /@olxui/core/13.3.0_5rzy53przelm5jchjmb5vr6dxy:
-    resolution: {integrity: sha512-IXM7ZU/Y1tvBh4if56p+yYfsMfDqDJ6hN3otwD0tx+V60pSAW6g6m6IOTqoXa+xz5OAHx4zWNXeRC07n+l5oqw==, tarball: '@olxui/core/-/@olxui/core-13.3.0.tgz'}
+  /@olxui/core/14.0.0-beta.7_5rzy53przelm5jchjmb5vr6dxy:
+    resolution: {integrity: sha512-azMmTVfoMJCCggfzKbmGFzFko1xsiBZAhFSojlEpa2hd5ar8pUZNoxYa7D/I9Phwdb0xiD7LLmKfSJfAiHnyYQ==, tarball: '@olxui/core/-/@olxui/core-14.0.0-beta.7.tgz'}
     peerDependencies:
       '@emotion/react': '>=11.0.0'
       '@emotion/styled': '>=11.0.0'
@@ -549,23 +549,23 @@ packages:
       '@babel/runtime': 7.21.0
       '@emotion/react': 11.10.5_3stiutgnnbnfnf3uowm5cip22i
       '@emotion/styled': 11.10.5_jrh5enlbqfbnumycmktdqgd6se
-      '@popperjs/core': 2.11.6
+      '@popperjs/core': 2.11.7
       '@styled-system/should-forward-prop': 5.1.5
       '@tippyjs/react': 4.2.6_biqbaboplfbrettd7655fr4n2y
       '@types/classnames': 2.3.0
-      '@types/lodash': 4.14.191
+      '@types/lodash': 4.14.192
       '@types/react-modal': 3.13.1
       '@types/react-transition-group': 4.4.5
       '@types/styled-system': 5.1.16
       '@types/styled-system__should-forward-prop': 5.1.2
       classnames: 2.3.2
-      focus-trap-react: 10.1.0_biqbaboplfbrettd7655fr4n2y
+      focus-trap-react: 10.1.1_biqbaboplfbrettd7655fr4n2y
       lodash: 4.17.21
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
       react-expanding-textarea: 2.3.6_react@18.2.0
       react-modal: 3.16.1_biqbaboplfbrettd7655fr4n2y
-      react-popper: 2.3.0_r6q5zrenym2zg7je7hgi674bti
+      react-popper: 2.3.0_d52dtujcogewjimhlbpfze4rs4
       react-swipeable: 7.0.0_react@18.2.0
       react-transition-group: 4.4.5_biqbaboplfbrettd7655fr4n2y
       styled-system: 5.1.5
@@ -592,6 +592,10 @@ packages:
 
   /@popperjs/core/2.11.6:
     resolution: {integrity: sha512-50/17A98tWUfQ176raKiOGXuYpLyyVMkxxG6oylzL3BPOlA6ADGdK7EYunSa4I064xerltq9TGXs8HmOk5E+vw==}
+    dev: false
+
+  /@popperjs/core/2.11.7:
+    resolution: {integrity: sha512-Cr4OjIkipTtcXKjAsm8agyleBuDHvxzeBoa1v543lbv1YaIwQjESsVcmjiWiPEbC1FIeHOG/Op9kdCmAmiS3Kw==}
     dev: false
 
   /@rushstack/eslint-patch/1.2.0:
@@ -716,6 +720,10 @@ packages:
 
   /@types/lodash/4.14.191:
     resolution: {integrity: sha512-BdZ5BCCvho3EIXw6wUCXHe7rS53AIDPLE+JzwgT+OsJk53oBfbSmZZ7CX4VaRoN78N+TJpFi9QPlfIVNmJYWxQ==}
+    dev: false
+
+  /@types/lodash/4.14.192:
+    resolution: {integrity: sha512-km+Vyn3BYm5ytMO13k9KTp27O75rbQ0NFw+U//g+PX7VZyjCioXaRFisqSIJRECljcTv73G3i6BpglNGHgUQ5A==}
     dev: false
 
   /@types/minimist/1.2.2:
@@ -1997,14 +2005,27 @@ packages:
       react: '>=16.3.0'
       react-dom: '>=16.3.0'
     dependencies:
-      focus-trap: 7.3.1
+      focus-trap: 7.4.0
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
       tabbable: 6.1.1
     dev: false
 
-  /focus-trap/7.3.1:
-    resolution: {integrity: sha512-bX/u4FJ+F0Pp6b/8Q9W8Br/JaLJ7rrhOJAzai9JU8bh4BPdOjEATy4pxHcbBBxFjPN4d1oHy7/KqknEdOetm9w==}
+  /focus-trap-react/10.1.1_biqbaboplfbrettd7655fr4n2y:
+    resolution: {integrity: sha512-OtLeSIQPKFzMzbLHkGtfZYwGLMhTRHd3CDhfyd0DDx8tvXzlgpseClDiuiKoiIHZtdjsbXTfTmUuuLKaxrwSyQ==}
+    peerDependencies:
+      prop-types: ^15.8.1
+      react: '>=16.3.0'
+      react-dom: '>=16.3.0'
+    dependencies:
+      focus-trap: 7.4.0
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
+      tabbable: 6.1.1
+    dev: false
+
+  /focus-trap/7.4.0:
+    resolution: {integrity: sha512-yI7FwUqU4TVb+7t6PaQ3spT/42r/KLEi8mtdGoQo2li/kFzmu9URmalTvw7xCCJtSOyhBxscvEAmvjeN9iHARg==}
     dependencies:
       tabbable: 6.1.1
     dev: false
@@ -3233,6 +3254,20 @@ packages:
       warning: 4.0.3
     dev: false
 
+  /react-popper/2.3.0_d52dtujcogewjimhlbpfze4rs4:
+    resolution: {integrity: sha512-e1hj8lL3uM+sgSR4Lxzn5h1GxBlpa4CQz0XLF8kx4MDrDRWY0Ena4c97PUeSX9i5W3UAfDP0z0FXCTQkoXUl3Q==}
+    peerDependencies:
+      '@popperjs/core': ^2.0.0
+      react: ^16.8.0 || ^17 || ^18
+      react-dom: ^16.8.0 || ^17 || ^18
+    dependencies:
+      '@popperjs/core': 2.11.7
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
+      react-fast-compare: 3.2.0
+      warning: 4.0.3
+    dev: false
+
   /react-popper/2.3.0_r6q5zrenym2zg7je7hgi674bti:
     resolution: {integrity: sha512-e1hj8lL3uM+sgSR4Lxzn5h1GxBlpa4CQz0XLF8kx4MDrDRWY0Ena4c97PUeSX9i5W3UAfDP0z0FXCTQkoXUl3Q==}
     peerDependencies:
@@ -3821,7 +3856,7 @@ packages:
   /tippy.js/6.3.7:
     resolution: {integrity: sha512-E1d3oP2emgJ9dRQZdf3Kkn0qJgI6ZLpyS5z6ZkY1DF3kaQaBsGZsndEpHwx+eC+tYM41HaSNvNtLx8tU57FzTQ==}
     dependencies:
-      '@popperjs/core': 2.11.6
+      '@popperjs/core': 2.11.7
     dev: false
 
   /to-fast-properties/2.0.0:

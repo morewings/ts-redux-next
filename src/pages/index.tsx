@@ -1,6 +1,7 @@
 import Head from "next/head";
 import { Button } from "@olxui/core/dist/core/Button";
 import { StyleDemo } from "@/components/Demo.style";
+import { InputsDemo } from "@/components/Inputs.demo";
 
 export default function Home() {
     return (
@@ -14,6 +15,7 @@ export default function Home() {
             <main>
                 <Button>Hello</Button>
                 <StyleDemo>Style demo</StyleDemo>
+                <InputsDemo />
             </main>
         </>
     );
