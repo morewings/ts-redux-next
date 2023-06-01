@@ -17,16 +17,16 @@
     "prepare": "is-ci || husky install"
   },
   "dependencies": {
-    "@emotion/react": "11.10.5",
-    "@emotion/styled": "11.10.5",
-    "@olxui/core": "14.0.0-beta.7",
+    "@emotion/react": "11.11.0",
+    "@emotion/styled": "11.11.0",
+    "@olxui/core": "15.0.1",
     "@nexus/lib-react": "13.3.0",
     "next": "13.1.5",
     "react": "18.2.0",
     "react-dom": "18.2.0"
   },
   "devDependencies": {
-    "@emotion/babel-plugin": "11.10.5",
+    "@emotion/babel-plugin": "11.11.0",
     "@next/bundle-analyzer": "13.1.6",
     "@types/node": "18.11.18",
     "@types/react": "18.0.27",
