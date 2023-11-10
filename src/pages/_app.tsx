@@ -1,5 +1,5 @@
 import type { AppProps } from 'next/app';
-import 'the-new-css-reset/css/reset.css';
+// import 'the-new-css-reset/css/reset.css';
 
 import { GlobalStyle, theme, ThemeProvider } from '@/styling';
 import { ReduxProvider } from '@/state';
