@@ -1,6 +1,7 @@
 import Head from 'next/head';
 
 import { Example } from '@/components/Example';
+import { Container, Cell, Row, Col } from '@/components/Layout';
 
 export default function Home() {
     return (
@@ -12,7 +13,16 @@ export default function Home() {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <main>
-                <Example />
+                <Container>
+                    <Row>
+                        <Col xs="fluid">
+                            <Example />
+                        </Col>
+                        <Col xs={6}>
+                            <Cell>hello</Cell>
+                        </Col>
+                    </Row>
+                </Container>
             </main>
         </>
     );

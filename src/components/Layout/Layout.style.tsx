@@ -76,9 +76,9 @@ export const Col = styled.div<Partial<SizesConfig> & Partial<OffsetConfig>>`
 
 export const Cell = styled.div`
     align-items: center;
-    background: ${({ theme }) => theme.colors['background-brand-primary']};
+    background: gray;
     border-radius: 4px;
-    color: ${({ theme }) => theme.colors['text-global-inverse']};
+    color: white;
     display: flex;
     flex-direction: column;
     height: 64px;

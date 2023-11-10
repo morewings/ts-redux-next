@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const ExampleChild = styled.div`
-    color: blueviolet;
+    color: beige;
 `;
 
 export const StyledExample = styled.div`
