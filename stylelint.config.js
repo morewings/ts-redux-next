@@ -29,6 +29,7 @@ module.exports = {
         'annotation-no-unknown': null,
         'custom-property-empty-line-before': null,
         'block-no-empty': null,
-        'length-zero-no-unit': true
+        'length-zero-no-unit': true,
+        'declaration-block-no-redundant-longhand-properties': null
     }
 };
