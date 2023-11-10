@@ -1,6 +1,8 @@
-import { ThemeBaseType } from "@olxui/core/dist/theme";
+import 'styled-components';
+import type { theme } from '@/styling';
 
-declare module "@emotion/react" {
-    // eslint-disable-next-line @typescript-eslint/no-empty-interface
-    export interface Theme extends ThemeBaseType {}
+type Theme = typeof theme;
+
+declare module 'styled-components' {
+    export type DefaultTheme = Theme;
 }

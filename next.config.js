@@ -1,18 +1,18 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true,
-  swcMinify: true,
-  distDir: 'build',
-  // Rename or delete `.babelrc` to use built-in SWC transpiler
-  compiler: {
-    emotion: true,
-  }
-}
+    reactStrictMode: true,
+    swcMinify: true,
+    distDir: 'build',
+    compiler: {
+        styledComponents: true
+    }
+};
 
 /* Enable bundle analysis. Run `yarn analyze:build` to get report */
+/* eslint-disable-next-line import/no-extraneous-dependencies, @typescript-eslint/no-var-requires */
 const withBundleAnalyzer = require('@next/bundle-analyzer')({
-  enabled: process.env.ANALYZE === 'true',
-})
-module.exports = withBundleAnalyzer(nextConfig)
+    enabled: process.env.ANALYZE === 'true'
+});
+module.exports = withBundleAnalyzer(nextConfig);
 
 // module.exports = nextConfig

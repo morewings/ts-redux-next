@@ -1,21 +1,15 @@
-import type { AppProps } from "next/app";
-import { Provider } from "@olxui/core/dist/core/Provider";
-import { theme as themeOtodom } from "@olxui/core/dist/theme/OtodomTheme";
-import { theme as themeImovirtual } from "@olxui/core/dist/theme/ImovirtualTheme";
-import { theme as themeStoria } from "@olxui/core/dist/theme/StoriaTheme";
+import type { AppProps } from 'next/app';
+import { ThemeProvider } from 'styled-components';
 
-/* Build time theme injection example */
-const selectedTheme =
-    {
-        IMOVIRTUAL: themeImovirtual,
-        OTODOM: themeOtodom,
-        STORIA: themeStoria,
-    }[process.env.THEME as "IMOVIRTUAL" | "OTODOM" | "STORIA"] || themeOtodom;
+import { theme } from '@/styling';
+import { ReduxProvider } from '@/state';
 
 export default function App({ Component, pageProps }: AppProps) {
     return (
-        <Provider theme={selectedTheme}>
-            <Component {...pageProps} />
-        </Provider>
+        <ReduxProvider>
+            <ThemeProvider theme={theme}>
+                <Component {...pageProps} />
+            </ThemeProvider>
+        </ReduxProvider>
     );
 }
