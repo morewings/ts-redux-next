@@ -1,19 +1,21 @@
 import React from 'react';
-import { Provider } from 'react-redux';
+import {Provider} from 'react-redux';
 import configureStore from 'redux-mock-store';
-import { renderHook } from '@testing-library/react-hooks';
+import {renderHook} from '@testing-library/react';
 
-import { INCREMENT_COUNTER } from './actionTypes';
+import type {State} from '@/features/counter/CounterReducer';
+
+import {Actions} from './actionTypes';
 import useIncrementCounter from './useIncrementCounter';
 
 describe('features > counter > useIncrementCounter', () => {
     /** Create mock store with the count value */
-    const mockStore = configureStore([]);
+    const mockStore = configureStore<{counter: State}>([]);
     const value = 6;
     const store = mockStore({
-        count: {
-            value
-        }
+        counter: {
+            value,
+        },
     });
 
     /**
@@ -32,6 +34,7 @@ describe('features > counter > useIncrementCounter', () => {
          * because jest saves calls data for spies and mocks.
          * @see https://jestjs.io/docs/en/mock-function-api#mockfnmockclear
          */
+        // @ts-expect-error TS2339: Property mockClear does not exist on type Dispatch<AnyAction>
         store.dispatch.mockClear();
     });
 
@@ -40,8 +43,8 @@ describe('features > counter > useIncrementCounter', () => {
          * Render hook, using testing-library utility
          * @see https://react-hooks-testing-library.com/reference/api#renderhook
          */
-        const { result } = renderHook(() => useIncrementCounter(), {
-            wrapper: ({ children }) => <Provider store={store}>{children}</Provider>
+        const {result} = renderHook(() => useIncrementCounter(), {
+            wrapper: ({children}) => <Provider store={store}>{children}</Provider>,
         });
 
         expect(result.current).toBeInstanceOf(Function);
@@ -49,8 +52,8 @@ describe('features > counter > useIncrementCounter', () => {
 
     describe('incrementCounter', () => {
         it('increments counter value by 1', () => {
-            const { result } = renderHook(() => useIncrementCounter(), {
-                wrapper: ({ children }) => <Provider store={store}>{children}</Provider>
+            const {result} = renderHook(() => useIncrementCounter(), {
+                wrapper: ({children}) => <Provider store={store}>{children}</Provider>,
             });
 
             result.current();
@@ -60,8 +63,8 @@ describe('features > counter > useIncrementCounter', () => {
 
             /** store.dispatch should be run with proper action */
             expect(store.dispatch).toHaveBeenCalledWith({
-                type: INCREMENT_COUNTER,
-                value: value + 1 // value should be increased by one
+                type: Actions.INCREMENT_COUNTER,
+                value: value + 1, // value should be increased by one
             });
         });
     });

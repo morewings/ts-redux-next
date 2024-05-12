@@ -1,17 +1,18 @@
 'use client';
 
-import { combineReducers, createStore, applyMiddleware, compose } from 'redux';
-import { Provider } from 'react-redux';
-import type { FC, ReactNode } from 'react';
+import React from 'react';
+import {combineReducers, createStore, applyMiddleware, compose} from 'redux';
+import {Provider} from 'react-redux';
+import type {FC, ReactNode} from 'react';
 
-import { CounterReducer } from '@/features/counter';
-import { RandomReducer } from '@/features/random';
+import {CounterReducer} from '@/features/counter';
+import {RandomReducer} from '@/features/random';
 
-import { promiseResolverMiddleware } from './promiseResolverMiddleware';
+import {promiseResolverMiddleware} from './promiseResolverMiddleware';
 
 const rootReducer = combineReducers({
     counter: CounterReducer,
-    random: RandomReducer
+    random: RandomReducer,
 });
 
 /**
@@ -33,6 +34,6 @@ const composedEnhancers = composeEnhancers(middlewareEnhancer);
 
 export const store = createStore(rootReducer, undefined, composedEnhancers);
 
-export const ReduxProvider: FC<{ children?: ReactNode }> = ({ children }) => {
+export const ReduxProvider: FC<{children?: ReactNode}> = ({children}) => {
     return <Provider store={store}>{children}</Provider>;
 };

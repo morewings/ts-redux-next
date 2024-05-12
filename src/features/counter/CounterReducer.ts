@@ -1,11 +1,11 @@
-import { Actions } from './actionTypes';
+import {Actions} from './actionTypes';
 
 export type State = {
     value: number;
 };
 
 export const initialState = {
-    value: 0
+    value: 0,
 } as State;
 
 export type Action = {
@@ -16,7 +16,7 @@ export type Action = {
 const reducer = (state = initialState, action: Action): State => {
     switch (action.type) {
         case Actions.INCREMENT_COUNTER: {
-            return { ...state, value: action.value };
+            return {...state, value: action.value};
         }
 
         default:

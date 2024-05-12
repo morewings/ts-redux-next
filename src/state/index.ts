@@ -1,1 +1,1 @@
-export { ReduxProvider } from './ReduxProvider';
+export {ReduxProvider} from './ReduxProvider';

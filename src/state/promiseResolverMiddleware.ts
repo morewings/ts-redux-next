@@ -1,25 +1,24 @@
-import type { Action, Middleware } from 'redux';
-
-type ActionAsync = Action<string> & { payload?: Promise<unknown> };
+import type {Action, Middleware} from 'redux';
 
 type PromiseDispatch = <T extends Action>(promise: Promise<T>) => Promise<T>;
 
-export const promiseResolverMiddleware: Middleware<PromiseDispatch> = store => next => (action: ActionAsync) => {
+// TODO: improve types
+export const promiseResolverMiddleware: Middleware<PromiseDispatch> = store => next => (action: any) => {
     if (!(action.payload instanceof Promise)) {
         return next(action);
     }
     action.payload.then(
-        response => {
+        (response: unknown) => {
             store.dispatch({
                 type: `${action.type}_FULFILLED`,
-                payload: response
+                payload: response,
             });
         },
         () => {
             store.dispatch({
-                type: `${action.type}_REJECTED`
+                type: `${action.type}_REJECTED`,
             });
         }
     );
-    return next({ type: `${action.type}_PENDING` });
+    return next({type: `${action.type}_PENDING`});
 };

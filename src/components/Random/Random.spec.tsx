@@ -1,18 +1,20 @@
 import React from 'react';
-import { Provider } from 'react-redux';
-import { render, fireEvent, waitFor, screen, waitForElementToBeRemoved } from '@testing-library/react';
+import {Provider} from 'react-redux';
+import {render, fireEvent, waitFor, screen, waitForElementToBeRemoved} from '@testing-library/react';
 import axios from 'axios';
 import configureStore from 'redux-mock-store';
-import { GET_RANDOM_NUMBER } from 'features/random/actionTypes';
-import { store as realStore } from 'withReduxFeatures';
 
-import { promiseResolverMiddleware } from '../../middlewares/promiseResolverMiddleware';
+import {GET_RANDOM_NUMBER} from '@/features/random/actionTypes';
+import {store as realStore} from '@/state/ReduxProvider';
+import {promiseResolverMiddleware} from '@/state/promiseResolverMiddleware';
+
 import Random from './Random';
 
 /**
  * Create mock store
  * @see https://github.com/dmitry-zaets/redux-mock-store
  */
+// @ts-expect-error TS2322: Type
 const mockStore = configureStore([promiseResolverMiddleware]);
 
 jest.mock('axios');
@@ -34,15 +36,15 @@ describe('components > Random', () => {
         ${true}   | ${false} | ${false}
         ${false}  | ${true}  | ${false}
         ${false}  | ${false} | ${true}
-    `('renders different store states', ({ isLoading, hasError, isFulfilled }) => {
+    `('renders different store states', ({isLoading, hasError, isFulfilled}) => {
         it(`when isLoading === ${isLoading} && hasError === ${hasError} && isFulfilled === ${isFulfilled}`, () => {
             const store = mockStore({
                 random: {
                     isLoading,
                     hasError,
                     isFulfilled,
-                    number: isFulfilled ? 1 : undefined
-                }
+                    number: isFulfilled ? 1 : undefined,
+                },
             });
 
             /**
@@ -51,8 +53,8 @@ describe('components > Random', () => {
              * `wrapper`:
              * @see https://testing-library.com/docs/react-testing-library/api#wrapper
              */
-            const { asFragment } = render(<Random />, {
-                wrapper: ({ children }) => <Provider store={store}>{children}</Provider>
+            const {asFragment} = render(<Random />, {
+                wrapper: ({children}) => <Provider store={store}>{children}</Provider>,
             });
 
             /**
@@ -68,17 +70,18 @@ describe('components > Random', () => {
          * Mock axios successful response
          * @see https://www.robinwieruch.de/axios-jest
          */
-        axios.get.mockImplementationOnce(() => Promise.resolve({ data: response }));
+        // @ts-expect-error TS2339: Property mockImplementationOnce does not exist on type
+        axios.get.mockImplementationOnce(() => Promise.resolve({data: response}));
 
         /**
          * `getByRole`:
          * @see https://testing-library.com/docs/dom-testing-library/api-queries#byrole
          */
-        const { asFragment, getByRole } = render(<Random />, {
-            wrapper: ({ children }) => (
+        const {asFragment, getByRole} = render(<Random />, {
+            wrapper: ({children}) => (
                 /* We use real store here, to get action through */
                 <Provider store={realStore}>{children}</Provider>
-            )
+            ),
         });
 
         /**
@@ -105,17 +108,18 @@ describe('components > Random', () => {
          * Mock axios rejected response
          * @see https://www.robinwieruch.de/axios-jest
          */
+        // @ts-expect-error TS2339: Property mockImplementationOnce does not exist on type
         axios.get.mockImplementationOnce(() => Promise.reject(new Error('')));
 
         /**
          * `getByRole`:
          * @see https://testing-library.com/docs/dom-testing-library/api-queries#byrole
          */
-        const { asFragment, getByRole } = render(<Random />, {
-            wrapper: ({ children }) => (
+        const {asFragment, getByRole} = render(<Random />, {
+            wrapper: ({children}) => (
                 /* We use real store here, to get action through */
                 <Provider store={realStore}>{children}</Provider>
-            )
+            ),
         });
 
         /**
@@ -142,22 +146,23 @@ describe('components > Random', () => {
             random: {
                 isLoading: false,
                 hasError: false,
-                isFulfilled: false
-            }
+                isFulfilled: false,
+            },
         });
 
         /**
          * Mock axios successful response
          * @see https://www.robinwieruch.de/axios-jest
          */
-        axios.get.mockImplementationOnce(() => Promise.resolve({ data: response }));
+        // @ts-expect-error TS2339: Property mockImplementationOnce does not exist on type
+        axios.get.mockImplementationOnce(() => Promise.resolve({data: response}));
 
         /**
          * `getByRole`:
          * @see https://testing-library.com/docs/dom-testing-library/api-queries#byrole
          */
-        const { getByRole } = render(<Random />, {
-            wrapper: ({ children }) => <Provider store={store}>{children}</Provider>
+        const {getByRole} = render(<Random />, {
+            wrapper: ({children}) => <Provider store={store}>{children}</Provider>,
         });
 
         /**
@@ -168,7 +173,7 @@ describe('components > Random', () => {
 
         /** First dispatched action should have _PENDING suffix */
         expect(store.getActions()[0]).toEqual({
-            type: `${GET_RANDOM_NUMBER}_PENDING`
+            type: `${GET_RANDOM_NUMBER}_PENDING`,
         });
 
         await waitFor(() => {
@@ -185,22 +190,23 @@ describe('components > Random', () => {
             random: {
                 isLoading: false,
                 hasError: false,
-                isFulfilled: false
-            }
+                isFulfilled: false,
+            },
         });
 
         /**
          * Mock axios rejected response
          * @see https://www.robinwieruch.de/axios-jest
          */
+        // @ts-expect-error TS2339: Property mockImplementationOnce does not exist on type
         axios.get.mockImplementationOnce(() => Promise.reject(new Error('')));
 
         /**
          * `getByRole`:
          * @see https://testing-library.com/docs/dom-testing-library/api-queries#byrole
          */
-        const { getByRole } = render(<Random />, {
-            wrapper: ({ children }) => <Provider store={store}>{children}</Provider>
+        const {getByRole} = render(<Random />, {
+            wrapper: ({children}) => <Provider store={store}>{children}</Provider>,
         });
 
         /**
@@ -211,7 +217,7 @@ describe('components > Random', () => {
 
         /** First dispatched action should have _PENDING suffix */
         expect(store.getActions()[0]).toEqual({
-            type: `${GET_RANDOM_NUMBER}_PENDING`
+            type: `${GET_RANDOM_NUMBER}_PENDING`,
         });
 
         await waitFor(() => {
