@@ -1,6 +1,6 @@
 {
-  "name": "nexus-starter-next",
-  "version": "0.1.0",
+  "name": "ts-redux-next",
+  "version": "0.0.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
