@@ -1,35 +1,16 @@
 module.exports = {
-    extends: [
-        'stylelint-config-standard',
-        'stylelint-config-styled-components',
-        'stylelint-prettier/recommended',
-        'stylelint-config-prettier'
-    ],
-    customSyntax: 'postcss-styled-syntax',
-    plugins: ['stylelint-order'],
+    extends: ['stylelint-config-standard', 'stylelint-prettier/recommended'],
     rules: {
-        /**
-         * Enforce alphabetical order for properties and custom properties before standard
-         * @see https://github.com/hudochenkov/stylelint-order
-         */
+        'function-calc-no-unspaced-operator': true,
         'order/order': ['custom-properties', 'declarations'],
         'order/properties-alphabetical-order': true,
-        /** Disable rules which conflict with Emotion */
-        'function-no-unknown': null,
-        'value-keyword-case': null,
-        'function-name-case': null,
-        /** Enforce camel-case CSS variable names */
-        'custom-property-pattern': [
-            '^[a-z][a-zA-Z0-9]+$',
-            {
-                message: 'Expected "%s" variable name to be lower camelCase'
-            }
-        ],
-        'selector-class-pattern': null,
-        'annotation-no-unknown': null,
-        'custom-property-empty-line-before': null,
-        'block-no-empty': null,
-        'length-zero-no-unit': true,
-        'declaration-block-no-redundant-longhand-properties': null
-    }
+        'property-no-vendor-prefix': true,
+        'media-feature-name-no-vendor-prefix': true,
+        'at-rule-no-vendor-prefix': true,
+        'selector-no-vendor-prefix': true,
+        'max-nesting-depth': 3,
+        'selector-max-compound-selectors': 5
+    },
+    plugins: ['stylelint-order'],
+    ignoreFiles: ['**/*.snap']
 };

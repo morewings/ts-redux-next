@@ -4,9 +4,10 @@ import { combineReducers, createStore, applyMiddleware, compose } from 'redux';
 import { Provider } from 'react-redux';
 import type { FC, ReactNode } from 'react';
 
+import { CounterReducer } from '@/features/counter';
+import { RandomReducer } from '@/features/random';
+
 import { promiseResolverMiddleware } from './promiseResolverMiddleware';
-import { CounterReducer } from './../features/counter';
-import { RandomReducer } from './../features/random';
 
 const rootReducer = combineReducers({
     counter: CounterReducer,
