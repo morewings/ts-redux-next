@@ -2,7 +2,8 @@ import React from 'react';
 import {Provider} from 'react-redux';
 import {render, fireEvent} from '@testing-library/react';
 import configureStore from 'redux-mock-store';
-import {INCREMENT_COUNTER} from 'features/counter/actionTypes';
+
+import {Actions} from '@/features/counter/actionTypes';
 
 import Counter from './Counter';
 
@@ -10,7 +11,7 @@ describe('components > Counter', () => {
     /** Create mock store with the count value */
     const mockStore = configureStore([]);
     const store = mockStore({
-        count: {
+        counter: {
             value: 6,
         },
     });
@@ -31,6 +32,7 @@ describe('components > Counter', () => {
          * because jest saves calls data for spies and mocks.
          * @see https://jestjs.io/docs/en/mock-function-api#mockfnmockclear
          */
+        // @ts-expect-error TS2339: Property mockClear does not exist on type
         store.dispatch.mockClear();
     });
 
@@ -77,7 +79,7 @@ describe('components > Counter', () => {
 
         /** Check if store.dispatch was run with correct action */
         expect(store.dispatch).toHaveBeenCalledWith({
-            type: INCREMENT_COUNTER,
+            type: Actions.INCREMENT_COUNTER,
             value: 7,
         });
     });

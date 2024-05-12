@@ -1,7 +1,7 @@
 import React from 'react';
 import {Provider} from 'react-redux';
 import configureStore from 'redux-mock-store';
-import {renderHook} from '@testing-library/react-hooks';
+import {renderHook} from '@testing-library/react';
 
 import {useRandomNumber, useLoadingState} from './selectors';
 

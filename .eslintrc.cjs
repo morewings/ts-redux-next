@@ -136,7 +136,27 @@ module.exports = {
                     },
                 ],
             },
-        }
+        },
+        /* Allow devDependencies imports for tests and config files */
+        {
+            files: [
+                '**/*.spec.*',
+                '**/testUtils/*.*',
+                '**/*.js',
+                '**/*.cjs',
+                'jest.config.cjs',
+                '**/setupTests.ts',
+            ],
+            rules: {
+                'import/no-extraneous-dependencies': [
+                    'error',
+                    {
+                        devDependencies: true,
+                        peerDependencies: true,
+                    },
+                ],
+            },
+        },
     ],
 };
 

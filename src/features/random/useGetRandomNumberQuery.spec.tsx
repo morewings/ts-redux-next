@@ -2,10 +2,10 @@ import React from 'react';
 import {Provider} from 'react-redux';
 import axios from 'axios';
 import configureStore from 'redux-mock-store';
-import {waitFor} from '@testing-library/react';
-import {renderHook} from '@testing-library/react-hooks';
+import {waitFor, renderHook} from '@testing-library/react';
 
-import {promiseResolverMiddleware} from '../../middlewares/promiseResolverMiddleware';
+import {promiseResolverMiddleware} from '@/state/promiseResolverMiddleware';
+
 import {GET_RANDOM_NUMBER} from './actionTypes';
 import useGetRandomNumberQuery from './useGetRandomNumberQuery';
 
@@ -53,6 +53,7 @@ describe('features > counter > useGetRandomNumberQuery', () => {
              * Mock axios successful response
              * @see https://www.robinwieruch.de/axios-jest
              */
+            // @ts-expect-error TS2339: Property mockImplementationOnce does not exist on type
             axios.get.mockImplementationOnce(() => Promise.resolve({data: response}));
 
             /**
@@ -82,6 +83,7 @@ describe('features > counter > useGetRandomNumberQuery', () => {
              * Mock axios rejected response
              * @see https://www.robinwieruch.de/axios-jest
              */
+            // @ts-expect-error TS2339: Property mockImplementationOnce does not exist on type
             axios.get.mockImplementationOnce(() => Promise.reject(new Error('')));
 
             /**

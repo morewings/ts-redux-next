@@ -3,10 +3,11 @@ import {Provider} from 'react-redux';
 import {render, fireEvent, waitFor, screen, waitForElementToBeRemoved} from '@testing-library/react';
 import axios from 'axios';
 import configureStore from 'redux-mock-store';
-import {GET_RANDOM_NUMBER} from 'features/random/actionTypes';
-import {store as realStore} from 'withReduxFeatures';
 
-import {promiseResolverMiddleware} from '../../middlewares/promiseResolverMiddleware';
+import {GET_RANDOM_NUMBER} from '@/features/random/actionTypes';
+import {store as realStore} from '@/state/ReduxProvider';
+import {promiseResolverMiddleware} from '@/state/promiseResolverMiddleware';
+
 import Random from './Random';
 
 /**
@@ -68,6 +69,7 @@ describe('components > Random', () => {
          * Mock axios successful response
          * @see https://www.robinwieruch.de/axios-jest
          */
+        // @ts-expect-error TS2339: Property mockImplementationOnce does not exist on type
         axios.get.mockImplementationOnce(() => Promise.resolve({data: response}));
 
         /**
@@ -105,6 +107,7 @@ describe('components > Random', () => {
          * Mock axios rejected response
          * @see https://www.robinwieruch.de/axios-jest
          */
+        // @ts-expect-error TS2339: Property mockImplementationOnce does not exist on type
         axios.get.mockImplementationOnce(() => Promise.reject(new Error('')));
 
         /**
@@ -150,6 +153,7 @@ describe('components > Random', () => {
          * Mock axios successful response
          * @see https://www.robinwieruch.de/axios-jest
          */
+        // @ts-expect-error TS2339: Property mockImplementationOnce does not exist on type
         axios.get.mockImplementationOnce(() => Promise.resolve({data: response}));
 
         /**
@@ -193,6 +197,7 @@ describe('components > Random', () => {
          * Mock axios rejected response
          * @see https://www.robinwieruch.de/axios-jest
          */
+        // @ts-expect-error TS2339: Property mockImplementationOnce does not exist on type
         axios.get.mockImplementationOnce(() => Promise.reject(new Error('')));
 
         /**

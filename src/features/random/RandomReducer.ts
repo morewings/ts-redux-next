@@ -2,9 +2,9 @@ import {Actions} from './actionTypes';
 
 export type State = {
     number?: number;
-    isLoading: boolean;
-    hasError: boolean;
-    isFulfilled: boolean;
+    isLoading?: boolean;
+    hasError?: boolean;
+    isFulfilled?: boolean;
 };
 
 const initialState = {
@@ -16,7 +16,7 @@ const initialState = {
 
 export type Action = {
     type: keyof typeof Actions;
-    payload: {data: number};
+    payload?: {data?: number};
 };
 
 const reducer = (state = initialState, action: Action): State => {
@@ -35,7 +35,7 @@ const reducer = (state = initialState, action: Action): State => {
                 isFulfilled: true,
                 isLoading: false,
                 hasError: false,
-                number: action.payload.data,
+                number: action?.payload?.data,
             };
 
         case `${Actions.GET_RANDOM_NUMBER}_REJECTED`:

@@ -1,4 +1,4 @@
-import {INCREMENT_COUNTER} from './actionTypes';
+import {Actions} from './actionTypes';
 import CounterReducer from './CounterReducer';
 
 describe('features > counter > CounterReducer', () => {
@@ -12,13 +12,14 @@ describe('features > counter > CounterReducer', () => {
         };
 
         const action = {
-            type: 'FOO',
+            type: Actions.INCREMENT_COUNTER,
+            value: 0,
         };
 
-        expect(CounterReducer(initialState, action)).toBe(initialState);
+        expect(CounterReducer(initialState, action)).toStrictEqual(initialState);
     });
 
-    it(`returns state with incremented value, if ${INCREMENT_COUNTER} action is dispatched`, () => {
+    it(`returns state with incremented value, if ${Actions.INCREMENT_COUNTER} action is dispatched`, () => {
         const initialState = {
             value: 0,
         };
@@ -29,13 +30,13 @@ describe('features > counter > CounterReducer', () => {
         };
 
         const action = {
-            type: INCREMENT_COUNTER,
+            type: Actions.INCREMENT_COUNTER,
             value: expectedState.value,
         };
         /**
          * Use `toEqual` matcher instead of `toBe`,
          * since latter assumes object equality
          */
-        expect(CounterReducer(initialState, action)).toEqual(expectedState);
+        expect(CounterReducer(initialState, action)).toStrictEqual(expectedState);
     });
 });

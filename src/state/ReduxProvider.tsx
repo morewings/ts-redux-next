@@ -1,5 +1,6 @@
 'use client';
 
+import React from 'react';
 import {combineReducers, createStore, applyMiddleware, compose} from 'redux';
 import {Provider} from 'react-redux';
 import type {FC, ReactNode} from 'react';
