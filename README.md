@@ -2,6 +2,8 @@
 
 This template is for Next based web applications using Redux.
 
+Tba
+
 ## Features
 
 - Supports **Typescript**.
