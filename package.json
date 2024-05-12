@@ -12,8 +12,6 @@
     "lint:style": "stylelint 'src/**/*.{ts,tsx}'",
     "fix:style": "stylelint 'src/**/*.{ts,tsx}' --fix",
     "lint:tsc": "tsc --pretty --noEmit",
-    "docker:build": "docker build -t registry.naspersclassifieds.com/olxeu/nexus/starter-next/node-18-pnpm .",
-    "docker:push": "docker push registry.naspersclassifieds.com/olxeu/nexus/starter-next/node-18-pnpm",
     "prepare": "is-ci || husky install"
   },
   "dependencies": {
