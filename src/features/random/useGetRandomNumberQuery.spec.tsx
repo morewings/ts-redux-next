@@ -13,6 +13,7 @@ jest.mock('axios');
 
 describe('features > counter > useGetRandomNumberQuery', () => {
     /** Create mock store with middlewares */
+    // @ts-expect-error TS2322: Type
     const mockStore = configureStore([promiseResolverMiddleware]);
 
     const store = mockStore({

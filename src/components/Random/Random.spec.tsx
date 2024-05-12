@@ -14,6 +14,7 @@ import Random from './Random';
  * Create mock store
  * @see https://github.com/dmitry-zaets/redux-mock-store
  */
+// @ts-expect-error TS2322: Type
 const mockStore = configureStore([promiseResolverMiddleware]);
 
 jest.mock('axios');
