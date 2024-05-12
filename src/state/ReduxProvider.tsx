@@ -5,12 +5,12 @@ import { Provider } from 'react-redux';
 import type { FC, ReactNode } from 'react';
 
 import { promiseResolverMiddleware } from './promiseResolverMiddleware';
-import { UsersReducer } from './../features/users';
-import { ThemeReducer } from './../features/themes';
+import { CounterReducer } from './../features/counter';
+import { RandomReducer } from './../features/random';
 
 const rootReducer = combineReducers({
-    users: UsersReducer,
-    themes: ThemeReducer
+    counter: CounterReducer,
+    random: RandomReducer
 });
 
 /**
