@@ -1,0 +1,33 @@
+.navHeader {
+    align-items: center;
+    background: teal;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 12px 24px;
+    position: sticky;
+}
+
+.name {
+    color: white;
+    cursor: default;
+    font-size: 24px;
+    font-weight: 500;
+    margin: 0;
+    text-shadow: 3px 3px 1px rgb(0 0 0 / 33%);
+    user-select: none;
+}
+
+.navigation {
+    display: flex;
+    gap: 12px;
+    margin-left: auto;
+}
+
+.link {
+    border-bottom: 2px solid white;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+}

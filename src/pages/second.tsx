@@ -1,19 +1,14 @@
 import React from 'react';
 
-import Counter from '@/components/Counter';
-import Random from '@/components/Random';
 import {Head} from '@/layout/Head';
 import {NavHeader} from '@/layout/NavHeader';
 
-export default function Home() {
+export default function Second() {
     return (
         <>
             <Head pageTitle="First page" />
             <NavHeader />
-            <main>
-                <Counter />
-                <Random />
-            </main>
+            <main>Boring second</main>
         </>
     );
 }
