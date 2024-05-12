@@ -1,7 +1,7 @@
-import type { FC } from 'react';
+import type {FC} from 'react';
 import React from 'react';
 
-import { useCountValue, useIncrementCounter } from '@/features/counter';
+import {useCountValue, useIncrementCounter} from '@/features/counter';
 
 import classes from './Counter.module.css';
 

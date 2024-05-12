@@ -1,12 +1,12 @@
 import React from 'react';
-import { Provider } from 'react-redux';
+import {Provider} from 'react-redux';
 import axios from 'axios';
 import configureStore from 'redux-mock-store';
-import { waitFor } from '@testing-library/react';
-import { renderHook } from '@testing-library/react-hooks';
+import {waitFor} from '@testing-library/react';
+import {renderHook} from '@testing-library/react-hooks';
 
-import { promiseResolverMiddleware } from '../../middlewares/promiseResolverMiddleware';
-import { GET_RANDOM_NUMBER } from './actionTypes';
+import {promiseResolverMiddleware} from '../../middlewares/promiseResolverMiddleware';
+import {GET_RANDOM_NUMBER} from './actionTypes';
 import useGetRandomNumberQuery from './useGetRandomNumberQuery';
 
 jest.mock('axios');
@@ -19,8 +19,8 @@ describe('features > counter > useGetRandomNumberQuery', () => {
         random: {
             isLoading: false,
             hasError: false,
-            isFulfilled: false
-        }
+            isFulfilled: false,
+        },
     });
 
     it('returns function', () => {
@@ -28,8 +28,8 @@ describe('features > counter > useGetRandomNumberQuery', () => {
          * Render hook, using testing-library utility
          * @see https://react-hooks-testing-library.com/reference/api#renderhook
          */
-        const { result } = renderHook(() => useGetRandomNumberQuery(), {
-            wrapper: ({ children }) => <Provider store={store}>{children}</Provider>
+        const {result} = renderHook(() => useGetRandomNumberQuery(), {
+            wrapper: ({children}) => <Provider store={store}>{children}</Provider>,
         });
 
         expect(result.current).toBeInstanceOf(Function);
@@ -42,8 +42,8 @@ describe('features > counter > useGetRandomNumberQuery', () => {
 
         /** Note that tests functions are async */
         it(`handles successful API query`, async () => {
-            const { result } = renderHook(() => useGetRandomNumberQuery(), {
-                wrapper: ({ children }) => <Provider store={store}>{children}</Provider>
+            const {result} = renderHook(() => useGetRandomNumberQuery(), {
+                wrapper: ({children}) => <Provider store={store}>{children}</Provider>,
             });
 
             /** Mock response from API */
@@ -53,7 +53,7 @@ describe('features > counter > useGetRandomNumberQuery', () => {
              * Mock axios successful response
              * @see https://www.robinwieruch.de/axios-jest
              */
-            axios.get.mockImplementationOnce(() => Promise.resolve({ data: response }));
+            axios.get.mockImplementationOnce(() => Promise.resolve({data: response}));
 
             /**
              * Wait until async action finishes
@@ -62,7 +62,7 @@ describe('features > counter > useGetRandomNumberQuery', () => {
 
             /** First dispatched action should have _PENDING suffix */
             expect(store.getActions()[0]).toEqual({
-                type: `${GET_RANDOM_NUMBER}_PENDING`
+                type: `${GET_RANDOM_NUMBER}_PENDING`,
             });
 
             await waitFor(() => {
@@ -74,8 +74,8 @@ describe('features > counter > useGetRandomNumberQuery', () => {
         });
 
         it(`handles rejected API query`, async () => {
-            const { result } = renderHook(() => useGetRandomNumberQuery(), {
-                wrapper: ({ children }) => <Provider store={store}>{children}</Provider>
+            const {result} = renderHook(() => useGetRandomNumberQuery(), {
+                wrapper: ({children}) => <Provider store={store}>{children}</Provider>,
             });
 
             /**
@@ -91,7 +91,7 @@ describe('features > counter > useGetRandomNumberQuery', () => {
 
             /** First dispatched action should have _PENDING suffix */
             expect(store.getActions()[0]).toEqual({
-                type: `${GET_RANDOM_NUMBER}_PENDING`
+                type: `${GET_RANDOM_NUMBER}_PENDING`,
             });
 
             await waitFor(() => {

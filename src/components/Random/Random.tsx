@@ -1,12 +1,12 @@
 import React from 'react';
 
-import { useGetRandomNumberQuery, useRandomNumber, useLoadingState } from '@/features/random';
+import {useGetRandomNumberQuery, useRandomNumber, useLoadingState} from '@/features/random';
 
 import classes from './Random.module.css';
 
 const Random = () => {
     /** Loading state of random.org request from Redux store */
-    const { isLoading, hasError, isFulfilled } = useLoadingState();
+    const {isLoading, hasError, isFulfilled} = useLoadingState();
 
     /** Random number value */
     const number = useRandomNumber();

@@ -1,4 +1,4 @@
-import { GET_RANDOM_NUMBER } from './actionTypes';
+import {GET_RANDOM_NUMBER} from './actionTypes';
 import RandomReducer from './RandomReducer';
 
 describe('features > random > RandomReducer', () => {
@@ -6,11 +6,11 @@ describe('features > random > RandomReducer', () => {
         const initialState = {
             isLoading: false,
             hasError: false,
-            isFulfilled: false
+            isFulfilled: false,
         };
 
         const action = {
-            type: 'FOO'
+            type: 'FOO',
         };
 
         expect(RandomReducer(initialState, action)).toBe(initialState);
@@ -24,19 +24,19 @@ describe('features > random > RandomReducer', () => {
         `updates state according to dispatched action`,
         actionType => {
             const initialState = {
-                value: 0
+                value: 0,
             };
 
             const payload =
                 actionType === `${GET_RANDOM_NUMBER}_FULFILLED`
                     ? {
-                          data: 1
+                          data: 1,
                       }
                     : undefined;
 
             const action = {
                 type: actionType,
-                payload
+                payload,
             };
 
             expect(RandomReducer(initialState, action)).toMatchSnapshot();

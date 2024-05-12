@@ -1,9 +1,9 @@
 import React from 'react';
-import { Provider } from 'react-redux';
+import {Provider} from 'react-redux';
 import configureStore from 'redux-mock-store';
-import { renderHook } from '@testing-library/react-hooks';
+import {renderHook} from '@testing-library/react-hooks';
 
-import { INCREMENT_COUNTER } from './actionTypes';
+import {INCREMENT_COUNTER} from './actionTypes';
 import useIncrementCounter from './useIncrementCounter';
 
 describe('features > counter > useIncrementCounter', () => {
@@ -12,8 +12,8 @@ describe('features > counter > useIncrementCounter', () => {
     const value = 6;
     const store = mockStore({
         count: {
-            value
-        }
+            value,
+        },
     });
 
     /**
@@ -40,8 +40,8 @@ describe('features > counter > useIncrementCounter', () => {
          * Render hook, using testing-library utility
          * @see https://react-hooks-testing-library.com/reference/api#renderhook
          */
-        const { result } = renderHook(() => useIncrementCounter(), {
-            wrapper: ({ children }) => <Provider store={store}>{children}</Provider>
+        const {result} = renderHook(() => useIncrementCounter(), {
+            wrapper: ({children}) => <Provider store={store}>{children}</Provider>,
         });
 
         expect(result.current).toBeInstanceOf(Function);
@@ -49,8 +49,8 @@ describe('features > counter > useIncrementCounter', () => {
 
     describe('incrementCounter', () => {
         it('increments counter value by 1', () => {
-            const { result } = renderHook(() => useIncrementCounter(), {
-                wrapper: ({ children }) => <Provider store={store}>{children}</Provider>
+            const {result} = renderHook(() => useIncrementCounter(), {
+                wrapper: ({children}) => <Provider store={store}>{children}</Provider>,
             });
 
             result.current();
@@ -61,7 +61,7 @@ describe('features > counter > useIncrementCounter', () => {
             /** store.dispatch should be run with proper action */
             expect(store.dispatch).toHaveBeenCalledWith({
                 type: INCREMENT_COUNTER,
-                value: value + 1 // value should be increased by one
+                value: value + 1, // value should be increased by one
             });
         });
     });

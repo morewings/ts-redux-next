@@ -1,8 +1,8 @@
 import React from 'react';
-import { Provider } from 'react-redux';
-import { render, fireEvent } from '@testing-library/react';
+import {Provider} from 'react-redux';
+import {render, fireEvent} from '@testing-library/react';
 import configureStore from 'redux-mock-store';
-import { INCREMENT_COUNTER } from 'features/counter/actionTypes';
+import {INCREMENT_COUNTER} from 'features/counter/actionTypes';
 
 import Counter from './Counter';
 
@@ -11,8 +11,8 @@ describe('components > Counter', () => {
     const mockStore = configureStore([]);
     const store = mockStore({
         count: {
-            value: 6
-        }
+            value: 6,
+        },
     });
 
     /**
@@ -43,8 +43,8 @@ describe('components > Counter', () => {
          * `wrapper`
          * @see https://testing-library.com/docs/react-testing-library/api#wrapper
          */
-        const { asFragment, getByText } = render(<Counter />, {
-            wrapper: ({ children }) => <Provider store={store}>{children}</Provider>
+        const {asFragment, getByText} = render(<Counter />, {
+            wrapper: ({children}) => <Provider store={store}>{children}</Provider>,
         });
 
         /**
@@ -62,8 +62,8 @@ describe('components > Counter', () => {
          * `getByRole`:
          * @see https://testing-library.com/docs/dom-testing-library/api-queries#byrole
          */
-        const { getByRole } = render(<Counter />, {
-            wrapper: ({ children }) => <Provider store={store}>{children}</Provider>
+        const {getByRole} = render(<Counter />, {
+            wrapper: ({children}) => <Provider store={store}>{children}</Provider>,
         });
 
         /**
@@ -78,7 +78,7 @@ describe('components > Counter', () => {
         /** Check if store.dispatch was run with correct action */
         expect(store.dispatch).toHaveBeenCalledWith({
             type: INCREMENT_COUNTER,
-            value: 7
+            value: 7,
         });
     });
 });
