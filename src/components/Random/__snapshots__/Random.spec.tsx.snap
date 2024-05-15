@@ -3,7 +3,7 @@
 exports[`components > Random handles rejected request 1`] = `
 <DocumentFragment>
   <div
-    class="counter"
+    class="random"
   >
     <h2
       class="header"
@@ -27,7 +27,7 @@ exports[`components > Random handles rejected request 1`] = `
 exports[`components > Random handles rejected request 2`] = `
 <DocumentFragment>
   <div
-    class="counter"
+    class="random"
   >
     <h2
       class="header"
@@ -50,7 +50,7 @@ exports[`components > Random handles rejected request 2`] = `
 exports[`components > Random handles successful request 1`] = `
 <DocumentFragment>
   <div
-    class="counter"
+    class="random"
   >
     <h2
       class="header"
@@ -74,7 +74,7 @@ exports[`components > Random handles successful request 1`] = `
 exports[`components > Random handles successful request 2`] = `
 <DocumentFragment>
   <div
-    class="counter"
+    class="random"
   >
     <h2
       class="header"
@@ -100,7 +100,7 @@ exports[`components > Random handles successful request 2`] = `
 exports[`components > Random renders different store states when isLoading === false && hasError === false && isFulfilled === false 1`] = `
 <DocumentFragment>
   <div
-    class="counter"
+    class="random"
   >
     <h2
       class="header"
@@ -123,7 +123,7 @@ exports[`components > Random renders different store states when isLoading === f
 exports[`components > Random renders different store states when isLoading === false && hasError === false && isFulfilled === true 1`] = `
 <DocumentFragment>
   <div
-    class="counter"
+    class="random"
   >
     <h2
       class="header"
@@ -149,7 +149,7 @@ exports[`components > Random renders different store states when isLoading === f
 exports[`components > Random renders different store states when isLoading === false && hasError === true && isFulfilled === false 1`] = `
 <DocumentFragment>
   <div
-    class="counter"
+    class="random"
   >
     <h2
       class="header"
@@ -172,7 +172,7 @@ exports[`components > Random renders different store states when isLoading === f
 exports[`components > Random renders different store states when isLoading === true && hasError === false && isFulfilled === false 1`] = `
 <DocumentFragment>
   <div
-    class="counter"
+    class="random"
   >
     <h2
       class="header"

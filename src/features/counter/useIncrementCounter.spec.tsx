@@ -3,7 +3,7 @@ import {Provider} from 'react-redux';
 import configureStore from 'redux-mock-store';
 import {renderHook} from '@testing-library/react';
 
-import type {State} from '@/features/counter/CounterReducer';
+import type {State} from '@/src/features/counter/CounterReducer';
 
 import {Actions} from './actionTypes';
 import useIncrementCounter from './useIncrementCounter';

@@ -1,27 +1,40 @@
 import React from 'react';
 import {Provider} from 'react-redux';
-import axios from 'axios';
 import configureStore from 'redux-mock-store';
 import {waitFor, renderHook} from '@testing-library/react';
 
-import {promiseResolverMiddleware} from '@/state/promiseResolverMiddleware';
+import {promiseResolverMiddleware} from '@/src/state/promiseResolverMiddleware';
 
 import {GET_RANDOM_NUMBER} from './actionTypes';
 import useGetRandomNumberQuery from './useGetRandomNumberQuery';
 
-jest.mock('axios');
+const fetchBackup = global.fetch;
+
+const fetchMock = jest.fn();
+
+/** Create mock store with middlewares */
+// @ts-expect-error TS2322
+const mockStore = configureStore([promiseResolverMiddleware]);
+
+const store = mockStore({
+    random: {
+        isLoading: false,
+        hasError: false,
+        isFulfilled: false,
+    },
+});
 
 describe('features > counter > useGetRandomNumberQuery', () => {
-    /** Create mock store with middlewares */
-    // @ts-expect-error TS2322: Type
-    const mockStore = configureStore([promiseResolverMiddleware]);
+    beforeAll(() => {
+        global.fetch = fetchMock;
+    });
 
-    const store = mockStore({
-        random: {
-            isLoading: false,
-            hasError: false,
-            isFulfilled: false,
-        },
+    beforeEach(() => {
+        fetchMock.mockClear();
+    });
+
+    afterAll(() => {
+        global.fetch = fetchBackup;
     });
 
     it('returns function', () => {
@@ -51,11 +64,14 @@ describe('features > counter > useGetRandomNumberQuery', () => {
             const response = 6;
 
             /**
-             * Mock axios successful response
-             * @see https://www.robinwieruch.de/axios-jest
+             * Mock fetch successful response
+             * @see https://developer.mozilla.org/en-US/docs/Web/API/fetch
              */
-            // @ts-expect-error TS2339: Property mockImplementationOnce does not exist on type
-            axios.get.mockImplementationOnce(() => Promise.resolve({data: response}));
+            fetchMock.mockImplementationOnce(() =>
+                Promise.resolve({
+                    json: () => Promise.resolve(response),
+                })
+            );
 
             /**
              * Wait until async action finishes
@@ -71,7 +87,7 @@ describe('features > counter > useGetRandomNumberQuery', () => {
                 /** Second dispatched action should have _FULFILLED suffix */
                 expect(store.getActions()[1].type).toEqual(`${GET_RANDOM_NUMBER}_FULFILLED`);
                 /** Second dispatched action should deliver response from API */
-                expect(store.getActions()[1].payload.data).toEqual(response);
+                expect(store.getActions()[1].payload).toEqual(response);
             });
         });
 
@@ -81,11 +97,14 @@ describe('features > counter > useGetRandomNumberQuery', () => {
             });
 
             /**
-             * Mock axios rejected response
-             * @see https://www.robinwieruch.de/axios-jest
+             * Mock fetch rejected response
+             * @see https://developer.mozilla.org/en-US/docs/Web/API/fetch
              */
-            // @ts-expect-error TS2339: Property mockImplementationOnce does not exist on type
-            axios.get.mockImplementationOnce(() => Promise.reject(new Error('')));
+            fetchMock.mockImplementationOnce(() =>
+                Promise.reject({
+                    json: () => Promise.reject(new Error('')),
+                })
+            );
 
             /**
              * Wait until async action finishes

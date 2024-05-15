@@ -1,7 +1,7 @@
 import React from 'react';
 import type {FC} from 'react';
 
-import {NavLink} from '@/layout/NavLink';
+import {NavLink} from '@/src/layout/NavLink';
 
 import classes from './NavHeader.module.css';
 

@@ -16,7 +16,7 @@ const initialState = {
 
 export type Action = {
     type: keyof typeof Actions;
-    payload?: {data?: number};
+    payload?: number;
 };
 
 const reducer = (state = initialState, action: Action): State => {
@@ -35,7 +35,7 @@ const reducer = (state = initialState, action: Action): State => {
                 isFulfilled: true,
                 isLoading: false,
                 hasError: false,
-                number: action?.payload?.data,
+                number: action?.payload,
             };
 
         case `${Actions.GET_RANDOM_NUMBER}_REJECTED`:

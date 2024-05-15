@@ -20,10 +20,13 @@
     "incremental": true,
     "baseUrl": ".",
     "paths": {
-      "@/*": [
-        "./src/*"
-      ]
-    }
+      "@/*": ["./*"]
+    },
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
   },
   "include": [
     "next-env.d.ts",
@@ -34,9 +37,11 @@
     "**/*.stories.ts",
     "*.config.ts",
     "src",
+    "app",
     ".eslintrc.cjs",
     "templates/**/*.ts",
-    "templates/**/*.tsx"
+    "templates/**/*.tsx",
+    "build/types/**/*.ts"
   ],
   "exclude": [
     "node_modules"

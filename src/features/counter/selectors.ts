@@ -1,3 +1,5 @@
+'use client';
+
 import {useSelector} from 'react-redux';
 
 import type {State} from './CounterReducer';
