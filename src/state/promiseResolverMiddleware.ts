@@ -1,17 +1,18 @@
-import type {Action, Middleware} from 'redux';
-
-type PromiseDispatch = <T extends Action>(promise: Promise<T>) => Promise<T>;
+import type {Middleware, UnknownAction} from 'redux';
 
 // TODO: improve types
-export const promiseResolverMiddleware: Middleware<PromiseDispatch> = store => next => (action: any) => {
+// @ts-expect-error TS2322
+export const promiseResolverMiddleware: Middleware = store => next => (action: UnknownAction) => {
     if (!(action.payload instanceof Promise)) {
         return next(action);
     }
     action.payload.then(
-        (response: unknown) => {
-            store.dispatch({
-                type: `${action.type}_FULFILLED`,
-                payload: response,
+        response => {
+            return response.json().then((response: number) => {
+                store.dispatch({
+                    type: `${action.type}_FULFILLED`,
+                    payload: response,
+                });
             });
         },
         () => {

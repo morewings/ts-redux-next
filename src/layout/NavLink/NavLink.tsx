@@ -1,3 +1,5 @@
+'use client';
+
 import type {FC, ReactNode, ComponentProps} from 'react';
 import NextLink from 'next/link';
 import classNames from 'classnames';

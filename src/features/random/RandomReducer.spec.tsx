@@ -11,7 +11,7 @@ describe('features > random > RandomReducer', () => {
 
         const action = {
             type: Actions.GET_RANDOM_NUMBER,
-            payload: {data: 0},
+            payload: 0,
         };
 
         expect(RandomReducer(initialState, action)).toBe(initialState);
@@ -32,9 +32,7 @@ describe('features > random > RandomReducer', () => {
 
         const payload =
             actionType === `${Actions.GET_RANDOM_NUMBER}_FULFILLED`
-                ? {
-                      data: 1,
-                  }
+                ? 1
                 : undefined;
 
         const action = {

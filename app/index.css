@@ -2,3 +2,7 @@ body {
     font-family: system-ui;
     margin: 0;
 }
+
+main {
+    padding: 36px;
+}

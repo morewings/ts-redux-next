@@ -1,6 +1,8 @@
+'use client';
+
 import React from 'react';
 
-import {useGetRandomNumberQuery, useRandomNumber, useLoadingState} from '@/features/random';
+import {useGetRandomNumberQuery, useRandomNumber, useLoadingState} from '@/src/features/random';
 
 import classes from './Random.module.css';
 
@@ -18,7 +20,7 @@ const Random = () => {
     const isPristine = !isLoading && !hasError && !isFulfilled;
 
     return (
-        <div className={classes.counter}>
+        <div className={classes.random}>
             <h2 className={classes.header}>Async Random</h2>
             <button disabled={isLoading} className={classes.button} type="button" onClick={getNumber}>
                 Get random number

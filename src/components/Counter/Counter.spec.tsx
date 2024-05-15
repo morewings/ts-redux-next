@@ -3,7 +3,7 @@ import {Provider} from 'react-redux';
 import {render, fireEvent} from '@testing-library/react';
 import configureStore from 'redux-mock-store';
 
-import {Actions} from '@/features/counter/actionTypes';
+import {Actions} from '@/src/features/counter/actionTypes';
 
 import Counter from './Counter';
 
