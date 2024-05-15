@@ -1,6 +1,6 @@
 .navHeader {
     align-items: center;
-    background: teal;
+    background: lightseagreen;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -14,13 +14,13 @@
     font-size: 24px;
     font-weight: 500;
     margin: 0;
-    text-shadow: 3px 3px 1px rgb(0 0 0 / 33%);
+    text-shadow: 1px 1px 1px rgb(0 0 0 / 66%);
     user-select: none;
 }
 
 .navigation {
     display: flex;
-    gap: 12px;
+    gap: 18px;
     margin-left: auto;
 }
 
