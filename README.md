@@ -5,7 +5,7 @@
 
 [![TS Redux Next](./design/cover.jpg)](#)
 
-This template is for Next based web applications using Redux.
+This template is for Next based web applications using Redux store and App Router configuration. This template has tests for React components, reducers, hooks. There is a basic Promise resolver middleware example.
 
 See [demo page](https://morewings.github.io/ts-redux-next/).
 
@@ -15,6 +15,7 @@ See [demo page](https://morewings.github.io/ts-redux-next/).
 - Powered by **Nextjs**.
 - Configured to use **App router**.
 - **Redux** with DevTools support.
+- Promise resolving Redux **middleware** example.
 - [pnpm](https://pnpm.io/) for blazing fast package management.
 - [Husky](https://github.com/typicode/husky) for git hooks.
 - [Eslint](https://eslint.org/) and [stylelint](https://stylelint.io/).
