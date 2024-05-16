@@ -11,7 +11,7 @@ See [demo page](https://morewings.github.io/ts-redux-next/).
 
 ## Features
 
-- Supports **Typescript**.
+- Written **Typescript**.
 - Powered by **Nextjs**.
 - Configured to use **App router**.
 - **Redux** with DevTools support.
