@@ -17,7 +17,7 @@ See [demo page](https://morewings.github.io/ts-redux-next/).
 - **Redux** with DevTools support.
 - Promise resolving Redux **middleware example**.
 - **Generate** components and features from CLI.
-- **pnpm** for blazing fast package management.
+- **pnpm** for fast package management.
 - **Husky** for git hooks.
 - **Eslint** and **stylelint**.
 - **Jest** and **react-testing-library** for testing.
