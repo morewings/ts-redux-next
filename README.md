@@ -1,11 +1,17 @@
+[![Deploy to GitHub Pages](https://github.com/morewings/ts-redux-next/actions/workflows/pages.yml/badge.svg)](https://github.com/morewings/ts-redux-next/actions/workflows/pages.yml)
+[![Post-merge tasks](https://github.com/morewings/ts-redux-next/actions/workflows/merge-jobs.yml/badge.svg)](https://github.com/morewings/ts-redux-next/actions/workflows/merge-jobs.yml)
+
 # Redux enabled Next template
 
 This template is for Next based web applications using Redux.
+
+See [demo page](https://morewings.github.io/ts-redux-next/).
 
 ## Features
 
 - Supports **Typescript**.
 - Powered by **Nextjs**.
+- Configured to use **App router**.
 - **Redux** with DevTools support.
 - [pnpm](https://pnpm.io/) for blazing fast package management.
 - [Husky](https://github.com/typicode/husky) for git hooks.
