@@ -22,7 +22,7 @@ See [demo page](https://morewings.github.io/ts-redux-next/).
 
 ### Prerequisites
 
-1. Install **Node** >= 18.x.
+1. Install **Node** >= 20.x.
 2. Install **pnpm**. E.g. `corepack prepare pnpm@latest --activate`.
 
 
