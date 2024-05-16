@@ -15,11 +15,12 @@ See [demo page](https://morewings.github.io/ts-redux-next/).
 - Powered by **Nextjs**.
 - Configured to use **App router**.
 - **Redux** with DevTools support.
-- Promise resolving Redux **middleware** example.
-- [pnpm](https://pnpm.io/) for blazing fast package management.
-- [Husky](https://github.com/typicode/husky) for git hooks.
-- [Eslint](https://eslint.org/) and [stylelint](https://stylelint.io/).
-- [Jest](https://jestjs.io/) and [react-testing-library](https://testing-library.com/docs/react-testing-library/intro) for testing.
+- Promise resolving Redux **middleware example**.
+- **Generate** components and features from CLI.
+- **pnpm** for blazing fast package management.
+- **Husky** for git hooks.
+- **Eslint** and **stylelint**.
+- **Jest** and **react-testing-library** for testing.
 
 ## Quickstart
 
@@ -38,3 +39,26 @@ npx degit https://github.com/morewings/ts-redux-next my-app
 cd ./my-app
 pnpm i
 ```
+
+## Generate components and features
+
+Template uses [generate-react-cli](https://www.npmjs.com/package/generate-react-cli). Templates are located at `./templates` folder.
+
+```shell script
+pnpm generate:component Foo
+```
+
+Creates all necessary React component files in `src/components` folder with name `Foo`. 
+
+```shell script
+pnpm generate:component-loading Foo
+```
+
+Creates React component files for component with dynamically loading content in `src/components` folder. 
+
+```shell script
+pnpm generate:feature Foo
+```
+
+Creates reducer, React hooks accessing global state and selectors inside in `src/features` folder. 
+
