@@ -60,7 +60,7 @@
     "npm-run-all2": "5.0.0",
     "postcss": "8.4.38",
     "postcss-preset-env": "9.5.13",
-    "postcss-styled-syntax": "0.5.0",
+    "postcss-styled-syntax": "0.6.4",
     "prettier": "2.8.8",
     "redux-mock-store": "1.5.4",
     "stylelint": "15.11.0",
