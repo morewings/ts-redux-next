@@ -3,6 +3,8 @@
 
 # Redux enabled Next template
 
+[![TS Redux Next](./design/cover.jpg)](#)
+
 This template is for Next based web applications using Redux.
 
 See [demo page](https://morewings.github.io/ts-redux-next/).
