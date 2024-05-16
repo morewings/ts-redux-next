@@ -4,6 +4,7 @@ const nextConfig = {
     swcMinify: true,
     distDir: 'build',
     output: 'export',
+    basePath: '/ts-redux-next',
 };
 
 /* Enable bundle analysis. Run `yarn analyze:build` to get report */
