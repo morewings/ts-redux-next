@@ -1,17 +1,32 @@
-# This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
-# For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
-
-name: Node.js CI
+# Simple workflow for deploying static content to GitHub Pages
+name: Deploy to GitHub Pages
 
 on:
-  pull_request:
-    branches: [ master ]
+  # Runs on pushes targeting the default branch
+  push:
+    branches: ["master"]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Allow one concurrent deployment
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
 
 jobs:
-  lint-test:
-
+  # Single deploy job since we're just deploying
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
-
     steps:
       - name: Cancel Workflow Action
         uses: styfle/cancel-workflow-action@0.12.1
@@ -48,14 +63,19 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-pnpm-store-
 
-      - name: Run test tasks
+      - name: Build docs
         run: |
           pnpm install
-          pnpm run lint:code --quiet
-          pnpm run lint:style --quiet
-          pnpm run lint:tsc
           pnpm run build
-          pnpm run test --silent
-          pnpm run generate:component Foo --dry-run
-          pnpm run generate:component-loading Foo --dry-run
-          pnpm run generate:feature Foo --dry-run
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: './build'
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
