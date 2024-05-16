@@ -1,7 +1,7 @@
 import {Actions} from './actionTypes';
-import RandomReducer from './RandomReducer';
+import {TemplateNameReducer} from './TemplateNameReducer';
 
-describe('features > random > RandomReducer', () => {
+describe('features > random > TemplateNameReducer', () => {
     it('returns initial state, if non matched action is dispatched', () => {
         const initialState = {
             isLoading: false,
@@ -10,11 +10,11 @@ describe('features > random > RandomReducer', () => {
         };
 
         const action = {
-            type: Actions.GET_RANDOM_NUMBER,
+            type: Actions.GET_TEMPLATE_NAME,
             payload: 0,
         };
 
-        expect(RandomReducer(initialState, action)).toBe(initialState);
+        expect(TemplateNameReducer(initialState, action)).toBe(initialState);
     });
 
     /**
@@ -22,21 +22,21 @@ describe('features > random > RandomReducer', () => {
      * @see https://jestjs.io/docs/en/api#testeachtablename-fn-timeout
      */
     it.each([
-        [`${Actions.GET_RANDOM_NUMBER}_FULFILLED`],
-        [`${Actions.GET_RANDOM_NUMBER}_PENDING`],
-        [`${Actions.GET_RANDOM_NUMBER}_REJECTED`],
+        [Actions.GET_TEMPLATE_NAME_FULFILLED],
+        [Actions.GET_TEMPLATE_NAME_PENDING],
+        [Actions.GET_TEMPLATE_NAME_REJECTED],
     ])(`updates state according to dispatched action`, actionType => {
         const initialState = {
-            number: 0,
+            value: 0,
         };
 
-        const payload = actionType === `${Actions.GET_RANDOM_NUMBER}_FULFILLED` ? 1 : undefined;
+        const payload = actionType === Actions.GET_TEMPLATE_NAME_FULFILLED ? 1 : undefined;
 
         const action = {
             type: actionType as keyof typeof Actions,
             payload,
         };
 
-        expect(RandomReducer(initialState, action)).toMatchSnapshot();
+        expect(TemplateNameReducer(initialState, action)).toMatchSnapshot();
     });
 });

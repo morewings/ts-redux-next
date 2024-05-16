@@ -3,9 +3,7 @@ const nextConfig = {
     reactStrictMode: true,
     swcMinify: true,
     distDir: 'build',
-    compiler: {
-        styledComponents: true,
-    },
+    output: 'export',
 };
 
 /* Enable bundle analysis. Run `yarn analyze:build` to get report */
