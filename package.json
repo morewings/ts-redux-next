@@ -16,7 +16,8 @@
         "test": "jest",
         "generate:component": "npx generate-react-cli component",
         "generate:component-loading": "npx generate-react-cli component --type=loading",
-        "generate:feature": "npx generate-react-cli component --type=feature"
+        "generate:feature": "npx generate-react-cli component --type=feature",
+        "generate:page": "npx generate-react-cli component --type=page"
     },
     "dependencies": {
         "@reduxjs/toolkit": "2.2.5",

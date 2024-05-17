@@ -49,19 +49,25 @@ Template uses [generate-react-cli](https://www.npmjs.com/package/generate-react-
 pnpm generate:component Foo
 ```
 
-Creates all necessary React component files in `src/components` folder with name `Foo`. 
+Creates all necessary React component files in `src/components/Foo`. 
 
 ```shell script
 pnpm generate:component-loading Foo
 ```
 
-Creates React component files for component with dynamically loading content in `src/components` folder. 
+Creates React component files for component with dynamically loading content in `./src/components/Foo`. 
 
 ```shell script
 pnpm generate:feature Foo
 ```
 
-Creates reducer, React hooks accessing global state and selectors inside in `src/features` folder. 
+Creates reducer, React hooks accessing global state and selectors inside in `./src/features/Foo`. 
+
+```shell script
+pnpm generate:page Foo
+```
+
+Creates Next App router compatible page in `.app/Foo` folder.
 
 ## Enable Styled components
 

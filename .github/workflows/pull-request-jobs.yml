@@ -70,3 +70,4 @@ jobs:
           pnpm run generate:component Foo --dry-run
           pnpm run generate:component-loading Foo --dry-run
           pnpm run generate:feature Foo --dry-run
+          pnpm run generate:page Foo --dry-run

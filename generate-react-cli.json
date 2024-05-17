@@ -60,6 +60,20 @@
         "queryTest": "templates/Feature/useGetTemplateNameQuery.spec.tsx",
         "query": "templates/Feature/useGetTemplateNameQuery.ts"
       }
+    },
+    "page": {
+      "path": "app",
+      "withLazy": false,
+      "withStory": false,
+      "withStyle": false,
+      "withTest": false,
+      "withIndex": false,
+      "withMdx": false,
+      "withHook": false,
+      "withHookTest": false,
+      "customTemplates": {
+        "component": "templates/Page/page.tsx"
+      }
     }
   }
 }
