@@ -18,8 +18,8 @@
         "start": "next start",
         "lint:code": "eslint src/** --report-unused-disable-directives",
         "fix:code": "run-s 'lint:code --fix'",
-        "lint:style": "stylelint 'src/**/*.css'",
-        "fix:style": "stylelint 'src/**/*.css' --fix",
+        "lint:style": "stylelint 'src/**/*.{ts,tsx}'",
+        "fix:style": "stylelint 'src/**/*.{ts,tsx}' --fix",
         "lint:tsc": "tsc --pretty --noEmit",
         "prepare": "is-ci || husky",
         "test": "jest",
@@ -36,6 +36,7 @@
         "react-dom": "18.3.1",
         "react-redux": "9.1.2",
         "redux": "5.0.1",
+        "styled-components": "6.1.12",
         "uniqid": "5.4.0"
     },
     "devDependencies": {
@@ -70,13 +71,12 @@
         "npm-run-all2": "6.2.2",
         "postcss": "8.4.40",
         "postcss-preset-env": "9.6.0",
+        "postcss-styled-syntax": "0.6.4",
         "prettier": "3.3.3",
         "redux-mock-store": "1.5.4",
         "stylelint": "16.8.1",
-        "stylelint-config-prettier": "9.0.5",
         "stylelint-config-standard": "36.0.1",
         "stylelint-order": "6.0.4",
-        "stylelint-prettier": "5.0.2",
         "typescript": "5.5.4",
         "typescript-eslint": "8.0.0"
     }

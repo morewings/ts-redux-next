@@ -1,8 +1,9 @@
 import {Provider} from 'react-redux';
-import {render, fireEvent} from '@testing-library/react';
+import {fireEvent} from '@testing-library/react';
 import configureStore from 'redux-mock-store';
 
 import {Actions} from '@/src/features/counter/actionTypes';
+import {render} from '@/src/testUtils';
 
 import Counter from './Counter';
 
