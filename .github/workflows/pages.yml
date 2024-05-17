@@ -74,6 +74,11 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-nextjs-${{ hashFiles('**/pnpm-lock.yaml') }}-
 
+      - name: Set up pages build envrinonment variable
+        run: |
+          touch .env
+          echo PAGES_BUILD=true >> .env
+
       - name: Build docs
         run: |
           pnpm install
@@ -81,8 +86,6 @@ jobs:
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
-        with:
-          static_site_generator: next
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
