@@ -16,7 +16,11 @@ export const NavLink: FC<Props> = ({children, href, className}) => {
     return (
         <NextLink
             href={href}
-            className={classNames(classes.navLink, {[classes.active]: currentPath === href}, className)}>
+            className={classNames(
+                classes.navLink,
+                {[classes.active]: currentPath === href},
+                className
+            )}>
             {children}
         </NextLink>
     );

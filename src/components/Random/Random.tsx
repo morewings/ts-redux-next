@@ -2,7 +2,11 @@
 
 import React from 'react';
 
-import {useGetRandomNumberQuery, useRandomNumber, useLoadingState} from '@/src/features/random';
+import {
+    useGetRandomNumberQuery,
+    useRandomNumber,
+    useLoadingState,
+} from '@/src/features/random';
 
 import classes from './Random.module.css';
 
@@ -22,7 +26,11 @@ const Random = () => {
     return (
         <div className={classes.random}>
             <h2 className={classes.header}>Async Random</h2>
-            <button disabled={isLoading} className={classes.button} type="button" onClick={getNumber}>
+            <button
+                disabled={isLoading}
+                className={classes.button}
+                type="button"
+                onClick={getNumber}>
                 Get random number
             </button>
             {isPristine && <div>Click the button to get random number</div>}

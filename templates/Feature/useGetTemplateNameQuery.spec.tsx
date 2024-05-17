@@ -85,7 +85,9 @@ describe('features > counter > useGetTemplateNameQuery', () => {
 
             await waitFor(() => {
                 /** Second dispatched action should have _FULFILLED suffix */
-                expect(store.getActions()[1].type).toEqual(Actions.GET_TEMPLATE_NAME_FULFILLED);
+                expect(store.getActions()[1].type).toEqual(
+                    Actions.GET_TEMPLATE_NAME_FULFILLED
+                );
                 /** Second dispatched action should deliver response from API */
                 expect(store.getActions()[1].payload).toEqual(response);
             });
@@ -118,7 +120,9 @@ describe('features > counter > useGetTemplateNameQuery', () => {
 
             await waitFor(() => {
                 /** Second dispatched action should have _REJECTED suffix */
-                expect(store.getActions()[1].type).toEqual(Actions.GET_TEMPLATE_NAME_REJECTED);
+                expect(store.getActions()[1].type).toEqual(
+                    Actions.GET_TEMPLATE_NAME_REJECTED
+                );
             });
         });
     });

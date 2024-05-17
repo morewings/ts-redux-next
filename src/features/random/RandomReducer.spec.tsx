@@ -22,15 +22,16 @@ describe('features > random > RandomReducer', () => {
      * @see https://jestjs.io/docs/en/api#testeachtablename-fn-timeout
      */
     it.each([
-        [`${Actions.GET_RANDOM_NUMBER}_FULFILLED`],
-        [`${Actions.GET_RANDOM_NUMBER}_PENDING`],
-        [`${Actions.GET_RANDOM_NUMBER}_REJECTED`],
+        [Actions.GET_RANDOM_NUMBER_FULFILLED],
+        [Actions.GET_RANDOM_NUMBER_PENDING],
+        [Actions.GET_RANDOM_NUMBER_REJECTED],
     ])(`updates state according to dispatched action`, actionType => {
         const initialState = {
             number: 0,
         };
 
-        const payload = actionType === `${Actions.GET_RANDOM_NUMBER}_FULFILLED` ? 1 : undefined;
+        const payload =
+            actionType === `${Actions.GET_RANDOM_NUMBER}_FULFILLED` ? 1 : undefined;
 
         const action = {
             type: actionType as keyof typeof Actions,

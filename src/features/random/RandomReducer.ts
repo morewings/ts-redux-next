@@ -21,7 +21,7 @@ export type Action = {
 
 const reducer = (state = initialState, action: Action): State => {
     switch (action.type) {
-        case `${Actions.GET_RANDOM_NUMBER}_PENDING`:
+        case Actions.GET_RANDOM_NUMBER_PENDING:
             return {
                 ...state,
                 isFulfilled: false,
@@ -30,7 +30,7 @@ const reducer = (state = initialState, action: Action): State => {
                 number: undefined,
             };
 
-        case `${Actions.GET_RANDOM_NUMBER}_FULFILLED`:
+        case Actions.GET_RANDOM_NUMBER_FULFILLED:
             return {
                 isFulfilled: true,
                 isLoading: false,
@@ -38,7 +38,7 @@ const reducer = (state = initialState, action: Action): State => {
                 number: action?.payload,
             };
 
-        case `${Actions.GET_RANDOM_NUMBER}_REJECTED`:
+        case Actions.GET_RANDOM_NUMBER_REJECTED:
             return {
                 isFulfilled: false,
                 isLoading: false,
