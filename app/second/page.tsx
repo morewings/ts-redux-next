@@ -3,7 +3,7 @@ import {Fragment} from 'react';
 
 import {NavHeader} from '@/src/layout/NavHeader';
 
-export default function IndexPage() {
+export default function SecondPage() {
     return (
         <Fragment>
             <NavHeader />
@@ -15,5 +15,5 @@ export default function IndexPage() {
 }
 
 export const metadata: Metadata = {
-    title: 'First page',
+    title: 'Second page',
 };
