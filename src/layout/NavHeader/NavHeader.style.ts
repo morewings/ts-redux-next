@@ -1,14 +1,16 @@
-.navHeader {
+import {styled} from 'styled-components';
+
+export const Header = styled.header`
     align-items: center;
-    background: lightseagreen;
+    background: ${props => props.theme.colors.brand};
     display: flex;
     flex-direction: row;
     justify-content: center;
     padding: 12px 24px;
     position: sticky;
-}
+`;
 
-.name {
+export const Name = styled.h1`
     color: white;
     cursor: default;
     font-size: 24px;
@@ -16,18 +18,10 @@
     margin: 0;
     text-shadow: 1px 1px 1px rgb(0 0 0 / 66%);
     user-select: none;
-}
+`;
 
-.navigation {
+export const Navigation = styled.div`
     display: flex;
     gap: 18px;
     margin-left: auto;
-}
-
-.link {
-    border-bottom: 2px solid white;
-    color: white;
-    font-size: 16px;
-    font-weight: bold;
-    text-decoration: none;
-}
+`;

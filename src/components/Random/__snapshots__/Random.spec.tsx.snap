@@ -3,15 +3,15 @@
 exports[`components > Random handles rejected request 1`] = `
 <DocumentFragment>
   <div
-    class="random"
+    class="Random-style__Wrapper-sc-897c4e91-0 fwlhui"
   >
     <h2
-      class="header"
+      class="Random-style__Header-sc-897c4e91-1 bRbASa"
     >
       Async Random
     </h2>
     <button
-      class="button"
+      class="Random-style__Button-sc-897c4e91-2 kKKkdC"
       disabled=""
       type="button"
     >
@@ -27,15 +27,15 @@ exports[`components > Random handles rejected request 1`] = `
 exports[`components > Random handles rejected request 2`] = `
 <DocumentFragment>
   <div
-    class="random"
+    class="Random-style__Wrapper-sc-897c4e91-0 fwlhui"
   >
     <h2
-      class="header"
+      class="Random-style__Header-sc-897c4e91-1 bRbASa"
     >
       Async Random
     </h2>
     <button
-      class="button"
+      class="Random-style__Button-sc-897c4e91-2 kKKkdC"
       type="button"
     >
       Get random number
@@ -50,15 +50,15 @@ exports[`components > Random handles rejected request 2`] = `
 exports[`components > Random handles successful request 1`] = `
 <DocumentFragment>
   <div
-    class="random"
+    class="Random-style__Wrapper-sc-897c4e91-0 fwlhui"
   >
     <h2
-      class="header"
+      class="Random-style__Header-sc-897c4e91-1 bRbASa"
     >
       Async Random
     </h2>
     <button
-      class="button"
+      class="Random-style__Button-sc-897c4e91-2 kKKkdC"
       disabled=""
       type="button"
     >
@@ -74,15 +74,15 @@ exports[`components > Random handles successful request 1`] = `
 exports[`components > Random handles successful request 2`] = `
 <DocumentFragment>
   <div
-    class="random"
+    class="Random-style__Wrapper-sc-897c4e91-0 fwlhui"
   >
     <h2
-      class="header"
+      class="Random-style__Header-sc-897c4e91-1 bRbASa"
     >
       Async Random
     </h2>
     <button
-      class="button"
+      class="Random-style__Button-sc-897c4e91-2 kKKkdC"
       type="button"
     >
       Get random number
@@ -100,15 +100,15 @@ exports[`components > Random handles successful request 2`] = `
 exports[`components > Random renders different store states when isLoading === false && hasError === false && isFulfilled === false 1`] = `
 <DocumentFragment>
   <div
-    class="random"
+    class="Random-style__Wrapper-sc-897c4e91-0 fwlhui"
   >
     <h2
-      class="header"
+      class="Random-style__Header-sc-897c4e91-1 bRbASa"
     >
       Async Random
     </h2>
     <button
-      class="button"
+      class="Random-style__Button-sc-897c4e91-2 kKKkdC"
       type="button"
     >
       Get random number
@@ -123,15 +123,15 @@ exports[`components > Random renders different store states when isLoading === f
 exports[`components > Random renders different store states when isLoading === false && hasError === false && isFulfilled === true 1`] = `
 <DocumentFragment>
   <div
-    class="random"
+    class="Random-style__Wrapper-sc-897c4e91-0 fwlhui"
   >
     <h2
-      class="header"
+      class="Random-style__Header-sc-897c4e91-1 bRbASa"
     >
       Async Random
     </h2>
     <button
-      class="button"
+      class="Random-style__Button-sc-897c4e91-2 kKKkdC"
       type="button"
     >
       Get random number
@@ -149,15 +149,15 @@ exports[`components > Random renders different store states when isLoading === f
 exports[`components > Random renders different store states when isLoading === false && hasError === true && isFulfilled === false 1`] = `
 <DocumentFragment>
   <div
-    class="random"
+    class="Random-style__Wrapper-sc-897c4e91-0 fwlhui"
   >
     <h2
-      class="header"
+      class="Random-style__Header-sc-897c4e91-1 bRbASa"
     >
       Async Random
     </h2>
     <button
-      class="button"
+      class="Random-style__Button-sc-897c4e91-2 kKKkdC"
       type="button"
     >
       Get random number
@@ -172,15 +172,15 @@ exports[`components > Random renders different store states when isLoading === f
 exports[`components > Random renders different store states when isLoading === true && hasError === false && isFulfilled === false 1`] = `
 <DocumentFragment>
   <div
-    class="random"
+    class="Random-style__Wrapper-sc-897c4e91-0 fwlhui"
   >
     <h2
-      class="header"
+      class="Random-style__Header-sc-897c4e91-1 bRbASa"
     >
       Async Random
     </h2>
     <button
-      class="button"
+      class="Random-style__Button-sc-897c4e91-2 kKKkdC"
       disabled=""
       type="button"
     >

@@ -3,16 +3,15 @@
 exports[`components > Counter renders without crashing 1`] = `
 <DocumentFragment>
   <div
-    class="counter"
+    class="Counter-style__Wrapper-sc-5ea76c0a-0 WKInf"
   >
     <h2
-      class="header"
+      class="Counter-style__Header-sc-5ea76c0a-1 btKynT"
     >
       Sync counter
     </h2>
     <button
-      class="button"
-      type="button"
+      class="Counter-style__Button-sc-5ea76c0a-2 cUYKaG"
     >
       Increment by one
     </button>

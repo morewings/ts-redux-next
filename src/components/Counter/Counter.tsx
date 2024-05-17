@@ -5,7 +5,7 @@ import React from 'react';
 
 import {useCountValue, useIncrementCounter} from '@/src/features/counter';
 
-import classes from './Counter.module.css';
+import {Wrapper, Header, Button} from './Counter.style';
 
 const Counter: FC = () => {
     /**
@@ -19,15 +19,13 @@ const Counter: FC = () => {
     const incrementCounter = useIncrementCounter();
 
     return (
-        <div className={classes.counter}>
-            <h2 className={classes.header}>Sync counter</h2>
-            <button className={classes.button} type="button" onClick={incrementCounter}>
-                Increment by one
-            </button>
+        <Wrapper>
+            <Header>Sync counter</Header>
+            <Button onClick={incrementCounter}>Increment by one</Button>
             <div>
                 Total value: <strong>{count}</strong>
             </div>
-        </div>
+        </Wrapper>
     );
 };
 
