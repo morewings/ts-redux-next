@@ -1,7 +1,7 @@
 import type {ReactNode} from 'react';
 
 import {StoreProvider} from '@/src/state/StoreProvider';
-import './index.css';
+import {StyledComponentsRegistry, ThemeProvider} from '@/src/style';
 
 type Props = {
     readonly children: ReactNode;
@@ -9,10 +9,14 @@ type Props = {
 
 export default function RootLayout({children}: Props) {
     return (
-        <html lang="en" suppressHydrationWarning>
-            <body>
-                <StoreProvider>{children}</StoreProvider>
-            </body>
-        </html>
+        <StoreProvider>
+            <ThemeProvider>
+                <html lang="en" suppressHydrationWarning>
+                    <body>
+                        <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
+                    </body>
+                </html>
+            </ThemeProvider>
+        </StoreProvider>
     );
 }
