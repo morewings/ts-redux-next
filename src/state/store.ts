@@ -6,8 +6,6 @@ import {RandomReducer} from '@/src/features/random';
 
 import {promiseResolverMiddleware} from './promiseResolverMiddleware';
 
-// `combineSlices` automatically combines the reducers using
-// their `reducerPath`s, therefore we no longer need to call `combineReducers`.
 const rootReducer = combineReducers({counter: CounterReducer, random: RandomReducer});
 // Infer the `RootState` type from the root reducer
 export type RootState = ReturnType<typeof rootReducer>;
