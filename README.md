@@ -70,7 +70,7 @@ Creates reducer, React hooks accessing global state and selectors inside in `./s
 pnpm generate:page Foo
 ```
 
-Creates Next App router compatible page in `.app/Foo` folder.
+Creates Next App router compatible page in `./app/Foo` folder.
 
 ## Enable Styled components
 
