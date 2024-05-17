@@ -8,7 +8,9 @@
 
 This template is for Next based web applications using Redux store and App Router configuration. This template has tests for React components, reducers, hooks. There is a basic Promise resolver middleware example.
 
-See [demo page](https://morewings.github.io/ts-redux-next/).
+Static html deployment: [Github pages](https://morewings.github.io/ts-redux-next/)
+
+Full-featured deployment: [Vercel](https://ts-redux-next.vercel.app/)
 
 ## Features
 
