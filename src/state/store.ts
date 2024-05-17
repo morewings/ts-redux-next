@@ -22,9 +22,9 @@ export const makeStore = () => {
         // Adding the api middleware enables caching, invalidation, polling,
         // and other useful features of `rtk-query`.
         middleware: getDefaultMiddleware =>
-            getDefaultMiddleware({serializableCheck: {ignoredActionPaths: ['payload', 'payload.headers']}}).concat(
-                promiseResolverMiddleware
-            ),
+            getDefaultMiddleware({
+                serializableCheck: {ignoredActionPaths: ['payload', 'payload.headers']},
+            }).concat(promiseResolverMiddleware),
     });
 };
 
@@ -32,4 +32,9 @@ export const makeStore = () => {
 export type AppStore = ReturnType<typeof makeStore>;
 // Infer the `AppDispatch` type from the store itself
 export type AppDispatch = AppStore['dispatch'];
-export type AppThunk<ThunkReturnType = void> = ThunkAction<ThunkReturnType, RootState, unknown, Action>;
+export type AppThunk<ThunkReturnType = void> = ThunkAction<
+    ThunkReturnType,
+    RootState,
+    unknown,
+    Action
+>;

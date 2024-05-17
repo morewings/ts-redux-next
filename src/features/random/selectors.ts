@@ -8,8 +8,11 @@ import type {State} from './RandomReducer';
  * @see https://reactjs.org/docs/hooks-custom.html
  */
 export const useLoadingState = () => {
-    const {isLoading, hasError, isFulfilled} = useSelector<{random: State}, State>(state => state.random);
+    const {isLoading, hasError, isFulfilled} = useSelector<{random: State}, State>(
+        state => state.random
+    );
     return {isLoading, hasError, isFulfilled};
 };
 
-export const useRandomNumber = () => useSelector<{random: State}, number | undefined>(state => state.random.number);
+export const useRandomNumber = () =>
+    useSelector<{random: State}, number | undefined>(state => state.random.number);

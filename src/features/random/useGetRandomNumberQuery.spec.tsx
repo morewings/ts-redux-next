@@ -5,7 +5,7 @@ import {waitFor, renderHook} from '@testing-library/react';
 
 import {promiseResolverMiddleware} from '@/src/state/promiseResolverMiddleware';
 
-import {GET_RANDOM_NUMBER} from './actionTypes';
+import {Actions} from './actionTypes';
 import useGetRandomNumberQuery from './useGetRandomNumberQuery';
 
 const fetchBackup = global.fetch;
@@ -80,12 +80,14 @@ describe('features > counter > useGetRandomNumberQuery', () => {
 
             /** First dispatched action should have _PENDING suffix */
             expect(store.getActions()[0]).toEqual({
-                type: `${GET_RANDOM_NUMBER}_PENDING`,
+                type: Actions.GET_RANDOM_NUMBER_PENDING,
             });
 
             await waitFor(() => {
                 /** Second dispatched action should have _FULFILLED suffix */
-                expect(store.getActions()[1].type).toEqual(`${GET_RANDOM_NUMBER}_FULFILLED`);
+                expect(store.getActions()[1].type).toEqual(
+                    Actions.GET_RANDOM_NUMBER_FULFILLED
+                );
                 /** Second dispatched action should deliver response from API */
                 expect(store.getActions()[1].payload).toEqual(response);
             });
@@ -113,12 +115,14 @@ describe('features > counter > useGetRandomNumberQuery', () => {
 
             /** First dispatched action should have _PENDING suffix */
             expect(store.getActions()[0]).toEqual({
-                type: `${GET_RANDOM_NUMBER}_PENDING`,
+                type: Actions.GET_RANDOM_NUMBER_PENDING,
             });
 
             await waitFor(() => {
                 /** Second dispatched action should have _REJECTED suffix */
-                expect(store.getActions()[1].type).toEqual(`${GET_RANDOM_NUMBER}_REJECTED`);
+                expect(store.getActions()[1].type).toEqual(
+                    Actions.GET_RANDOM_NUMBER_REJECTED
+                );
             });
         });
     });
