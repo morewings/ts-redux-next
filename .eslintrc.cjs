@@ -47,7 +47,12 @@ module.exports = {
         'import/order': [
             'error',
             {
-                groups: ['builtin', 'external', 'internal', ['parent', 'sibling', 'index']],
+                groups: [
+                    'builtin',
+                    'external',
+                    'internal',
+                    ['parent', 'sibling', 'index'],
+                ],
                 pathGroups: [
                     {
                         pattern: '@/**',
@@ -103,7 +108,13 @@ module.exports = {
         },
         /* Allow devDependencies imports for tests and config files */
         {
-            files: ['**/*.spec.*', '**/testUtils/*.*', '**/*.js', '**/*.cjs', '**/setupTests.ts'],
+            files: [
+                '**/*.spec.*',
+                '**/testUtils/*.*',
+                '**/*.js',
+                '**/*.cjs',
+                '**/setupTests.ts',
+            ],
             rules: {
                 'import/no-extraneous-dependencies': [
                     'error',
@@ -124,7 +135,8 @@ module.exports = {
                         patterns: [
                             {
                                 group: ['**/templates/**'],
-                                message: 'Imports from templates directory are forbidden.',
+                                message:
+                                    'Imports from templates directory are forbidden.',
                             },
                         ],
                     },
@@ -133,7 +145,14 @@ module.exports = {
         },
         /* Allow devDependencies imports for tests and config files */
         {
-            files: ['**/*.spec.*', '**/testUtils/*.*', '**/*.js', '**/*.cjs', 'jest.config.cjs', '**/setupTests.ts'],
+            files: [
+                '**/*.spec.*',
+                '**/testUtils/*.*',
+                '**/*.js',
+                '**/*.cjs',
+                'jest.config.cjs',
+                '**/setupTests.ts',
+            ],
             rules: {
                 'import/no-extraneous-dependencies': [
                     'error',
