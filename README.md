@@ -52,25 +52,25 @@ pnpm i
 Template uses [generate-react-cli](https://www.npmjs.com/package/generate-react-cli). Templates are located at `./templates` folder.
 
 ```shell script
-pnpm generate:component Foo
+pnpm run generate:component Foo
 ```
 
 Creates all necessary React component files in `./src/components/Foo`. 
 
 ```shell script
-pnpm generate:component-loading Foo
+pnpm run generate:component-loading Foo
 ```
 
 Creates React component files for component with dynamically loading content in `./src/components/Foo`. 
 
 ```shell script
-pnpm generate:feature Foo
+pnpm run generate:feature Foo
 ```
 
 Creates reducer, React hooks accessing global state and selectors inside in `./src/features/Foo`. 
 
 ```shell script
-pnpm generate:page Foo
+pnpm run generate:page Foo
 ```
 
 Creates Next App router compatible page in `./app/Foo` folder.
