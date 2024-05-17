@@ -39,7 +39,7 @@ Manually clone repo or use `degit`.
 # With CSS Modules config
 npx degit github:morewings/ts-redux-next my-app
 # With Styled Components config
-npx degit github:morewings/ts-redux-next#styled-components
+npx degit github:morewings/ts-redux-next#styled-components my-app
 cd ./my-app
 pnpm i
 ```
