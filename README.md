@@ -21,6 +21,7 @@ See [demo page](https://morewings.github.io/ts-redux-next/).
 - **Husky** for git hooks.
 - **Eslint** and **stylelint**.
 - **Jest** and **react-testing-library** for testing.
+- Supports **CSS Modules** and **Styled components**.
 
 ## Quickstart
 
@@ -61,4 +62,8 @@ pnpm generate:feature Foo
 ```
 
 Creates reducer, React hooks accessing global state and selectors inside in `src/features` folder. 
+
+## Enable Styled components
+
+You can find all changes inside this [PR](https://github.com/morewings/ts-redux-next/pull/40) and [styled-components](https://github.com/morewings/ts-redux-next/tree/styled-components) branch.
 
