@@ -1,4 +1,3 @@
-import type {Action, ThunkAction} from '@reduxjs/toolkit';
 import {configureStore, combineReducers} from '@reduxjs/toolkit';
 
 import {CounterReducer} from '@/src/features/counter';
