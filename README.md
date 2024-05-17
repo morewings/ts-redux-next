@@ -1,5 +1,6 @@
 [![Deploy to GitHub Pages](https://github.com/morewings/ts-redux-next/actions/workflows/pages.yml/badge.svg)](https://github.com/morewings/ts-redux-next/actions/workflows/pages.yml)
 [![Post-merge tasks](https://github.com/morewings/ts-redux-next/actions/workflows/merge-jobs.yml/badge.svg)](https://github.com/morewings/ts-redux-next/actions/workflows/merge-jobs.yml)
+![Vercel](https://vercelbadge.vercel.app/api/morewings/ts-redux-next)
 
 # Redux enabled Next template
 
