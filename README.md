@@ -52,7 +52,7 @@ Template uses [generate-react-cli](https://www.npmjs.com/package/generate-react-
 pnpm generate:component Foo
 ```
 
-Creates all necessary React component files in `src/components/Foo`. 
+Creates all necessary React component files in `./src/components/Foo`. 
 
 ```shell script
 pnpm generate:component-loading Foo
