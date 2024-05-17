@@ -36,7 +36,10 @@ See [demo page](https://morewings.github.io/ts-redux-next/).
 Manually clone repo or use `degit`.
 
 ```shell script
-npx degit https://github.com/morewings/ts-redux-next my-app
+# With CSS Modules config
+npx degit github:morewings/ts-redux-next my-app
+# With Styled Components config
+npx degit github:morewings/ts-redux-next#styled-components
 cd ./my-app
 pnpm i
 ```
