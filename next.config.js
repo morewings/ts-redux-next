@@ -9,7 +9,10 @@ module.exports = withBundleAnalyzer({
     reactStrictMode: true,
     swcMinify: true,
     distDir: 'build',
-    output: process.env.PAGES_BUILD === 'true' ? 'export' : undefined,
     cleanDistDir: true,
+    output: process.env.PAGES_BUILD === 'true' ? 'export' : undefined,
     basePath: process.env.PAGES_BUILD === 'true' ? '/ts-redux-next' : undefined,
+    compiler: {
+        styledComponents: true,
+    },
 });
