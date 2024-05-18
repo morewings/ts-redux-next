@@ -79,7 +79,7 @@ jobs:
           touch .env
           echo PAGES_BUILD=true >> .env
 
-      - name: Build docs
+      - name: Build demo site
         run: |
           pnpm install
           pnpm run build
