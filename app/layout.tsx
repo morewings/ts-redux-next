@@ -9,10 +9,10 @@ type Props = {
 
 export default function RootLayout({children}: Props) {
     return (
-        <StoreProvider>
-            <html lang="en" suppressHydrationWarning>
-                <body>{children}</body>
-            </html>
-        </StoreProvider>
+        <html lang="en" suppressHydrationWarning>
+            <body>
+                <StoreProvider>{children}</StoreProvider>
+            </body>
+        </html>
     );
 }
