@@ -79,3 +79,9 @@ Creates Next App router compatible page in `./app/Foo` folder.
 
 You can find all changes inside this [PR](https://github.com/morewings/ts-redux-next/pull/40) and [styled-components](https://github.com/morewings/ts-redux-next/tree/styled-components) branch.
 
+## Previous implementations
+
+[cra-template-quickstart-redux](https://github.com/morewings/cra-template-quickstart-redux)
+
+[react-template](https://github.com/morewings/react-template)
+
