@@ -7,7 +7,7 @@
         "build": "next build",
         "analyze:build": "ANALYZE=true run-s build",
         "start": "next start",
-        "lint:code": "eslint src/ --ext .js,.jsx,.ts,.tsx",
+        "lint:code": "eslint src/** --report-unused-disable-directives",
         "fix:code": "run-s 'lint:code --fix'",
         "lint:style": "stylelint 'src/**/*.css'",
         "fix:style": "stylelint 'src/**/*.css' --fix",
@@ -30,6 +30,8 @@
         "uniqid": "5.4.0"
     },
     "devDependencies": {
+        "@eslint/compat": "1.0.3",
+        "@eslint/js": "9.4.0",
         "@next/bundle-analyzer": "14.2.3",
         "@testing-library/jest-dom": "6.4.5",
         "@testing-library/react": "15.0.7",
@@ -41,7 +43,7 @@
         "@types/uniqid": "5.3.4",
         "@typescript-eslint/eslint-plugin": "7.11.0",
         "@typescript-eslint/parser": "7.11.0",
-        "eslint": "8.57.0",
+        "eslint": "9.4.0",
         "eslint-config-next": "14.2.3",
         "eslint-config-prettier": "9.1.0",
         "eslint-config-react-app": "7.0.1",
@@ -66,6 +68,7 @@
         "stylelint-config-standard": "36.0.0",
         "stylelint-order": "6.0.4",
         "stylelint-prettier": "5.0.0",
-        "typescript": "5.4.5"
+        "typescript": "5.4.5",
+        "typescript-eslint": "7.11.0"
     }
 }
