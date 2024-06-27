@@ -12,7 +12,7 @@
         "lint:style": "stylelint 'src/**/*.css'",
         "fix:style": "stylelint 'src/**/*.css' --fix",
         "lint:tsc": "tsc --pretty --noEmit",
-        "prepare": "is-ci || husky install",
+        "prepare": "is-ci || husky",
         "test": "jest",
         "generate:component": "npx generate-react-cli component",
         "generate:component-loading": "npx generate-react-cli component --type=loading",
