@@ -6,7 +6,7 @@ import {
     useLoadingState,
 } from '@/src/features/random';
 
-import classes from './Random.module.css';
+import {Wrapper, Header, Button} from './Random.style';
 
 const Random = () => {
     /** Loading state of random.org request from Redux store */
@@ -22,15 +22,11 @@ const Random = () => {
     const isPristine = !isLoading && !hasError && !isFulfilled;
 
     return (
-        <div className={classes.random}>
-            <h2 className={classes.header}>Async Random</h2>
-            <button
-                disabled={isLoading}
-                className={classes.button}
-                type="button"
-                onClick={getNumber}>
+        <Wrapper>
+            <Header>Async Random</Header>
+            <Button disabled={isLoading} type="button" onClick={getNumber}>
                 Get random number
-            </button>
+            </Button>
             {isPristine && <div>Click the button to get random number</div>}
             {isLoading && <div>Getting number</div>}
             {isFulfilled && (
@@ -39,7 +35,7 @@ const Random = () => {
                 </div>
             )}
             {hasError && <div>Ups...</div>}
-        </div>
+        </Wrapper>
     );
 };
 
