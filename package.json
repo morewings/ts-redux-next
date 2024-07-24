@@ -1,7 +1,16 @@
 {
     "name": "ts-redux-next",
     "version": "0.0.0",
-    "private": true,
+    "homepage": "https://morewings.github.io/ts-redux-next/",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/morewings/ts-redux-next.git"
+    },
+    "bugs": {
+        "url": "https://github.com/morewings/ts-redux-next/issues"
+    },
+    "license": "MIT",
+    "private": false,
     "scripts": {
         "dev": "next dev",
         "build": "next build",
