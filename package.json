@@ -61,7 +61,7 @@
         "lint-staged": "15.2.7",
         "npm-run-all2": "6.2.0",
         "postcss": "8.4.39",
-        "postcss-preset-env": "9.5.15",
+        "postcss-preset-env": "9.6.0",
         "postcss-styled-syntax": "0.6.4",
         "prettier": "3.3.2",
         "redux-mock-store": "1.5.4",
