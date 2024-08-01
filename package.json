@@ -29,7 +29,7 @@
         "generate:page": "npx generate-react-cli component --type=page"
     },
     "dependencies": {
-        "@reduxjs/toolkit": "2.2.6",
+        "@reduxjs/toolkit": "2.2.7",
         "classnames": "2.5.1",
         "next": "14.2.4",
         "react": "18.3.1",
