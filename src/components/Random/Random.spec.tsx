@@ -1,7 +1,6 @@
 import {Provider} from 'react-redux';
 import type {Store, Action} from 'redux';
 import {
-    render,
     fireEvent,
     waitFor,
     screen,
@@ -9,6 +8,7 @@ import {
 } from '@testing-library/react';
 import configureStore from 'redux-mock-store';
 
+import {render} from '@/src/testUtils';
 import {GET_RANDOM_NUMBER} from '@/src/features/random/actionTypes';
 import {makeStore} from '@/src/state/store';
 import {promiseResolverMiddleware} from '@/src/state/promiseResolverMiddleware';
