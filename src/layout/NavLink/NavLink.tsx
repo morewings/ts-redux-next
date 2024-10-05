@@ -1,27 +1,20 @@
 'use client';
 
 import type {FC, ReactNode, ComponentProps} from 'react';
-import NextLink from 'next/link';
-import classNames from 'classnames';
+import type NextLink from 'next/link';
 import {usePathname} from 'next/navigation';
 
-import classes from './NavLink.module.css';
+import {Link} from './NavLink.style';
 
 export type Props = ComponentProps<typeof NextLink> & {
     children?: ReactNode;
 };
 
-export const NavLink: FC<Props> = ({children, href, className}) => {
+export const NavLink: FC<Props> = ({children, href}) => {
     const currentPath = usePathname();
     return (
-        <NextLink
-            href={href}
-            className={classNames(
-                classes.navLink,
-                {[classes.active]: currentPath === href},
-                className
-            )}>
+        <Link href={href} active={currentPath === href}>
             {children}
-        </NextLink>
+        </Link>
     );
 };
