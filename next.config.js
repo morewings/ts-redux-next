@@ -1,5 +1,5 @@
 /* Enable bundle analysis. Run `yarn analyze:build` to get report */
-/* eslint-disable-next-line import/no-extraneous-dependencies, @typescript-eslint/no-var-requires */
+// eslint-disable-next-line @typescript-eslint/no-require-imports
 const withBundleAnalyzer = require('@next/bundle-analyzer')({
     enabled: process.env.ANALYZE === 'true',
 });
@@ -7,7 +7,6 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
 /** @type {import('next').NextConfig} */
 module.exports = withBundleAnalyzer({
     reactStrictMode: true,
-    swcMinify: true,
     distDir: 'build',
     output: process.env.PAGES_BUILD === 'true' ? 'export' : undefined,
     cleanDistDir: true,
