@@ -17,7 +17,7 @@
             "withHookTest": false,
             "customTemplates": {
                 "component": "templates/Component/TemplateName.tsx",
-                "style": "templates/Component/TemplateName.module.css",
+                "style": "templates/Component/TemplateName.style.ts",
                 "index": "templates/Component/index.ts",
                 "test": "templates/Component/TemplateName.spec.tsx"
             }
@@ -34,7 +34,7 @@
             "withHookTest": false,
             "customTemplates": {
                 "component": "templates/Loading/TemplateName.tsx",
-                "style": "templates/Loading/TemplateName.module.css",
+                "style": "templates/Loading/TemplateName.style.ts",
                 "index": "templates/Loading/index.ts",
                 "test": "templates/Loading/TemplateName.spec.tsx"
             }

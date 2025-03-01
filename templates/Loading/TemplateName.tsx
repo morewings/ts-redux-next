@@ -2,9 +2,13 @@
 
 import React from 'react';
 
-import {useGetRandomNumberQuery, useRandomNumber, useLoadingState} from '@/src/features/random';
+import {
+    useGetRandomNumberQuery,
+    useRandomNumber,
+    useLoadingState,
+} from '@/src/features/random';
 
-import classes from './TemplateName.module.css';
+import {Wrapper, Header, Button} from './TemplateName.style';
 
 export const TemplateName = () => {
     /** Loading state of random.org request from Redux store */
@@ -20,11 +24,11 @@ export const TemplateName = () => {
     const isPristine = !isLoading && !hasError && !isFulfilled;
 
     return (
-        <div className={classes.templateName}>
-            <h2 className={classes.header}>Async Random</h2>
-            <button disabled={isLoading} className={classes.button} type="button" onClick={getNumber}>
+        <Wrapper>
+            <Header>Async Random</Header>
+            <Button disabled={isLoading} type="button" onClick={getNumber}>
                 Get random number
-            </button>
+            </Button>
             {isPristine && <div>Click the button to get random number</div>}
             {isLoading && <div>Getting number</div>}
             {isFulfilled && (
@@ -33,6 +37,6 @@ export const TemplateName = () => {
                 </div>
             )}
             {hasError && <div>Ups...</div>}
-        </div>
+        </Wrapper>
     );
 };
