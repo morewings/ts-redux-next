@@ -31,7 +31,7 @@
     "dependencies": {
         "@reduxjs/toolkit": "2.5.1",
         "classnames": "2.5.1",
-        "next": "15.1.6",
+        "next": "15.2.0",
         "react": "19.0.0",
         "react-dom": "19.0.0",
         "react-redux": "9.2.0",
@@ -40,8 +40,8 @@
     },
     "devDependencies": {
         "@eslint/eslintrc": "3.2.0",
-        "@next/bundle-analyzer": "15.1.6",
-        "@next/eslint-plugin-next": "15.1.6",
+        "@next/bundle-analyzer": "15.2.0",
+        "@next/eslint-plugin-next": "15.2.0",
         "@testing-library/jest-dom": "6.6.3",
         "@testing-library/react": "16.2.0",
         "@testing-library/user-event": "14.6.1",
@@ -56,7 +56,7 @@
         "@typescript-eslint/parser": "8.22.0",
         "alias-hq": "6.2.4",
         "eslint": "9.19.0",
-        "eslint-config-next": "15.1.6",
+        "eslint-config-next": "15.2.0",
         "eslint-config-prettier": "10.0.2",
         "eslint-plugin-prettier": "5.2.3",
         "generate-react-cli": "8.4.9",
