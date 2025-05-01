@@ -58,7 +58,7 @@
         "eslint": "9.19.0",
         "eslint-config-next": "15.2.0",
         "eslint-config-prettier": "10.0.2",
-        "eslint-plugin-prettier": "5.2.3",
+        "eslint-plugin-prettier": "5.2.6",
         "generate-react-cli": "8.4.9",
         "husky": "9.1.7",
         "is-ci": "4.1.0",
