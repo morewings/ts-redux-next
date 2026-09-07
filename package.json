@@ -55,7 +55,7 @@
         "@typescript-eslint/eslint-plugin": "8.25.0",
         "@typescript-eslint/parser": "8.25.0",
         "alias-hq": "6.2.4",
-        "eslint": "9.19.0",
+        "eslint": "9.39.5",
         "eslint-config-next": "15.2.0",
         "eslint-config-prettier": "10.0.2",
         "eslint-plugin-prettier": "5.2.6",
