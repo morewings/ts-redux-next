@@ -39,7 +39,7 @@
         "uniqid": "5.4.0"
     },
     "devDependencies": {
-        "@eslint/eslintrc": "3.2.0",
+        "@eslint/eslintrc": "3.3.7",
         "@next/bundle-analyzer": "15.2.0",
         "@next/eslint-plugin-next": "15.2.0",
         "@testing-library/jest-dom": "6.6.3",
